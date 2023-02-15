@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+
+
+@apply  bg-gray-200 text-gray-900 dark:bg-black/40 dark:text-gray-300 ;
+  }
+
+}
+
+
+/* chrome and chromium based */
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
