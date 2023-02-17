@@ -56,7 +56,7 @@ export const EventsList: React.FC<PropsType> = ({
     <div className="relative mx-2 mt-5 max-w-4xl object-fill ">
       <Link href={`/event/${slug.current}`}>
         <Image
-          src={imageProps.src}
+          src={imageProps?.src}
           loader={imageProps?.loader}
           width={540}
           height={240}

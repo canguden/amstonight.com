@@ -1,7 +1,7 @@
-import {createClient, groq} from 'next-sanity'
+import { createClient, groq } from 'next-sanity'
 
-import {apiVersion, dataset, projectId, useCdn} from '../env'
-import {EventInfo} from '../../models/EventInfo'
+import { apiVersion, dataset, projectId, useCdn } from '../env'
+import { EventInfo } from '../../models/EventInfo'
 
 export const client = createClient({
   apiVersion,
@@ -11,15 +11,23 @@ export const client = createClient({
 })
 
 export async function getEventsBySlug(slug: string): Promise<EventInfo | null> {
-  if (!slug) return null;
+  if (!slug) {
+    console.error('No slug provided, can not get event')
+    return null
+  }
 
   const parameters = {
-    slug: slug
-  };
+    slug: slug,
+  }
 
   let query = groq`*[_type == 'event' && slug.current == $slug] {_id, eventName, slug, eventPrice, eventUrl, 'eventMusic': music, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
       eventImage {asset -> {..., metaData}},
       'tags': eventTags[]->{'name': genre, 'color': color.hex, _id}}`
 
-  return await client.fetch<EventInfo>(query, parameters)
+  const events = await client.fetch<EventInfo[]>(query, parameters)
+
+  if (!events || events?.length === 0) {
+    console.error("Event not found");
+  }
+  return events[0];
 }

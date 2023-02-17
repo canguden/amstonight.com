@@ -57,6 +57,7 @@ export default function IndexPage({ title, tags, slug }: PropsType) {
 
   const [show, setShow] = useState(true)
 
+
   return (
     <div>
       {/* <CurrentYear /> */}
