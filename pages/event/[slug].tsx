@@ -53,6 +53,10 @@ export default function Slug() {
           </p>
         </div>
       </a>
+
+      <button type="button" onClick={() => router.back()}>
+        Click here to go back
+      </button>
     </>
   )
 }
