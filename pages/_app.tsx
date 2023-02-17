@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { Jost } from '@next/font/google'
 import { AppProps } from 'next/app'
 import SideBar from 'components/SideBar';
+import Advert from 'components/Advert';
 
 
 
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider enableSystem={true} attribute="class">
         <SideBar />
         <Header />
+        <Advert />
       <Component {...pageProps} />
       <Footer/>
       </ThemeProvider>

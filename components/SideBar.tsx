@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import ThemeChanger from './ThemeChanger'
 import { useState, useEffect } from 'react'
-import { FaCompass, FaHome } from 'react-icons/fa'
+import { FaCompass, FaHome, FaStar } from 'react-icons/fa'
 import { MdFestival, MdOutlineRestaurant } from 'react-icons/md'
 import { AiFillHome } from 'react-icons/ai'
 
@@ -14,7 +14,7 @@ const SideBar = () => {
 return (
 <div className="hidden xl:fixed xl:top-0  xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-gray-800 xl:h-full 2xl:flex ">
 
-<div className='bg-gray-200 dark:bg-black w-72 '>
+<div className='bg-gray-200 dark:bg-black w-96 '>
       <h1 className='text-lg  font-bold md:font-bold ml-8 px-2 mt-10 md:text-2xl'>AmsTonight</h1>
       <div className="flex flex-col ml-8 ">
 
@@ -37,9 +37,9 @@ Explore
 Festivals
 
 </Link>
-<Link href='./restaurants'  className="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-5 flex-row content-center text-black dark:text-white font-semibold"><MdOutlineRestaurant className="h-7 w-7 mr-3 justify-end" />
+<Link href='./featured'  className="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-5 flex-row content-center text-black dark:text-white font-semibold"><FaStar className="h-7 w-7 mr-3 justify-end" />
 
-Restaurants
+Featured
 
 </Link>
 

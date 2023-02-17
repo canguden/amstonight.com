@@ -1,6 +1,7 @@
 import { format } from 'date-fns'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect } from 'react'
 import { useNextSanityImage } from 'next-sanity-image'
 import { Dispatch, SetStateAction } from 'react'
 
@@ -35,10 +36,17 @@ export const EventCard: React.FC<PropsType> = ({
     eventClub,
     eventMusic,
     eventUrl,
+    slug,
     eventTime,
     tags,
     eventImage,
   } = eventInfo
+
+  useEffect(() => {
+    console.log('value of slug:', slug);
+  }, [slug]);
+
+  if (!slug) return null;
 
   const imageProps = useNextSanityImage(client, eventImage.asset) // https://www.sanity.io/plugins/next-sanity-image
 
@@ -52,6 +60,7 @@ export const EventCard: React.FC<PropsType> = ({
   return (
  
     <div className="bottom-0 max-w-4xl relative mt-5 mx-2 object-fill  w-80">
+      <Link href={`/event/${slug.current}`}>
       <Image
         src={imageProps.src}
         loader={imageProps?.loader}
@@ -72,20 +81,20 @@ export const EventCard: React.FC<PropsType> = ({
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="text-xs font-thin">{eventAddress}</div>
+          <div className="text-md font-thin">{eventAddress}</div>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="my-1   text-xs font-thin">{eventTime}</div>
+          <div className="my-1   text-md font-thin">{eventTime}</div>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className=" text-xs font-thin">{eventMusic}</div>
+          <div className=" text-md font-thin">{eventMusic}</div>
         </div>
 
 
         <div className="flex justify-between items-center gap-1">
-          <div className="flex tezt-xs items-center text-gray-500">
+          <div className="flex tezt-md items-center text-gray-500">
           <Link href={eventUrl} target="_blank">
               Learn More
             </Link>
@@ -97,6 +106,7 @@ export const EventCard: React.FC<PropsType> = ({
             </div>
           </div>
           </div>
+          </Link>
           </div>
   )
 }

@@ -1,6 +1,7 @@
 import { format } from 'date-fns'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect } from 'react'
 import { useNextSanityImage } from 'next-sanity-image'
 import { Dispatch, SetStateAction } from 'react'
 
@@ -9,7 +10,9 @@ import { IoTicketOutline } from "react-icons/io5";
 import { EventInfo } from '../pages/index'
 import { client } from '../sanity/lib/client'
 // import { Tags } from './'
-import { FaFacebook } from 'react-icons/fa'
+
+
+
 
 type PropsType = {
   // setSelectedTag: Dispatch<SetStateAction<string[]>>
@@ -24,6 +27,7 @@ export const EventsList: React.FC<PropsType> = ({
   // selectedTags,
   selectedDay,
   eventInfo,
+
 }) => {
   const {
     eventAddress,
@@ -32,11 +36,18 @@ export const EventsList: React.FC<PropsType> = ({
     eventClub,
     eventMusic,
     eventUrl,
-    eventMaps,
+    slug,
     eventTime,
     tags,
     eventImage,
   } = eventInfo
+
+  useEffect(() => {
+
+    console.log('value of slug:', slug);
+  }, [slug]);
+
+  if (!slug) return null;
 
   const imageProps = useNextSanityImage(client, eventImage.asset) // https://www.sanity.io/plugins/next-sanity-image
 
@@ -48,7 +59,10 @@ export const EventsList: React.FC<PropsType> = ({
     currency: 'EUR',
   }).format(eventPrice)
   return (
+
+
     <div className="max-w-4xl relative mt-5 mx-2 object-fill ">
+      <Link href={`/event/${slug.current}`}>
       <Image
         src={imageProps.src}
         loader={imageProps?.loader}
@@ -69,31 +83,34 @@ export const EventsList: React.FC<PropsType> = ({
         </div>
 
         <div className="m-1 flex items-center gap-2">
-          <div className="  text-xs font-thin">{eventAddress}</div>
+          <div className="  text-md font-thin">{eventAddress}</div>
         </div>
 
         <div className="m-1 flex items-center gap-2">
-          <div className="my-1   text-xs font-thin">{eventTime}</div>
+          <div className="my-1  text-md font-thin">{eventTime}</div>
         </div>
 
         <div className="m-1 flex items-center gap-2">
-          <div className=" text-xs font-thin">{eventMusic}</div>
+          <div className=" text-sm font-thin">{eventMusic}</div>
         </div>
 
         <div className="m-1 flex justify-between items-center gap-1">
-          <div className="flex items-center text-gray-500">
+          <div className="flex items-center text-gray-800 dark:text-gray-300">
           <Link href={eventUrl} target="_blank">
-              Learn More
+            Tickets
             </Link>
           </div>
             <div className="mx-1 items-center flex flex-row content-center text-black dark:text-white font-semibold"><IoTicketOutline className="h-4 w-4 mr-1 justify-end" />
 
               {price}
-            
+              
+            </div>
             </div>
           </div>
+          </Link>
           </div>
 
-    </div>
+    
+    
   )
 }

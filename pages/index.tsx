@@ -19,13 +19,14 @@ import { client } from '../sanity/lib/client'
 import { FaArrowsAltH, FaCalendar } from 'react-icons/fa'
 import { BsFillCalendarDateFill, BsFillGrid3X3GapFill, BsGrid3X3 } from 'react-icons/bs'
 import { AiOutlineCalendar } from 'react-icons/ai'
+import { Slug } from '@sanity/types'
 
 type PropsType = {
   title: string
   tags: TagType[]
 }
 
-export default function IndexPage({ title, tags }: PropsType) {
+export default function IndexPage({ title, tags, slug }: PropsType) {
   const currentDate = new Date()
   const monthIndex = getMonth(currentDate)
   const today = currentDate.toDateString()
@@ -43,7 +44,7 @@ export default function IndexPage({ title, tags }: PropsType) {
         : selectedTags.map((el) => `"${el}"`).join(', ')
 
     const eventsQuery = groq`*[_type == 'event' && eventDate == '${selectedDate}' && eventTags[]->genre match [${match}]]
-      {_id, eventName, eventPrice, eventUrl, 'eventMusic': music, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
+      {_id, eventName, slug, eventPrice, eventUrl, 'eventMusic': music, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
       eventImage {asset -> {..., metaData}},
       'tags': eventTags[]->{'name': genre, 'color': color.hex, _id}}`
 
@@ -79,9 +80,9 @@ export default function IndexPage({ title, tags }: PropsType) {
           selectedTags={selectedTags}
         />
       </div> */}
-      <div className='content-center align-center items-center text-2xl ml-5 mt-20  flex flex-row'>
-        <AiOutlineCalendar className='mr-3'/>
-        {selectedDay}
+      <div className='content-center align-center items-center text-xl md:text-2xl  ml-5 mt-20  flex flex-row'>
+        <AiOutlineCalendar className='mr-3 text-red-500'/>
+        {selectedDay}, Amsterdam Party Agenda
         </div>
 
       <div className="mb-10">
@@ -146,6 +147,7 @@ export type EventInfo = {
   eventAddress: string
   eventPrice: number
   eventUrl: string
+  slug: string
 }
 
 // initial loading datas like page header and all existing tags

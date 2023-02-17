@@ -13,6 +13,20 @@ export default defineType({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
+    
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: input => input
+                             .toLowerCase()
+                             .replace(/\s+/g, '-')
+                             .slice(0, 200)
+      }
+    },
 
     defineField({
       title: 'Date',
@@ -49,7 +63,7 @@ export default defineType({
       title: 'Music',
       name: 'music',
       type: 'string',
-      description: 'Example: Hiphop, R&B, House',
+      description: 'Example: #hiphop #house',
       validation: (rule) => rule.required(),
     }),
 
