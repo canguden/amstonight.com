@@ -6,20 +6,14 @@ import { groq } from 'next-sanity'
 import { useCallback, useEffect, useState } from 'react'
 import { ListView } from 'components/ListView'
 
-import {
-  CurrentYear,
-  DaysScrollMenuItems,
-  EventCard,
-  EventScrollMenu,
-  Months,
-  Tags,
-} from '../components'
+import { DaysScrollMenuItems, EventScrollMenu, Months } from '../components'
 import { MONTHS } from '../lib/constants'
 import { client } from '../sanity/lib/client'
-import { FaArrowsAltH, FaCalendar } from 'react-icons/fa'
-import { BsFillCalendarDateFill, BsFillGrid3X3GapFill, BsGrid3X3 } from 'react-icons/bs'
+import { FaArrowsAltH } from 'react-icons/fa'
+import { BsGrid3X3 } from 'react-icons/bs'
 import { AiOutlineCalendar } from 'react-icons/ai'
-import { Slug } from '@sanity/types'
+import { TagType } from '../models/TagType'
+import {EventInfo} from "../models/EventInfo";
 
 type PropsType = {
   title: string
@@ -50,6 +44,8 @@ export default function IndexPage({ title, tags, slug }: PropsType) {
 
     const events = await client.fetch<EventInfo[]>(eventsQuery)
 
+    console.log({ events })
+
     setEventsState(events)
   }, [selectedDay, selectedTags])
 
@@ -62,7 +58,7 @@ export default function IndexPage({ title, tags, slug }: PropsType) {
   const [show, setShow] = useState(true)
 
   return (
-    <div className="m-auto sm:max-w-3xl">
+    <div>
       {/* <CurrentYear /> */}
       <Months
         selectedMonth={selectedMonth}
@@ -80,22 +76,22 @@ export default function IndexPage({ title, tags, slug }: PropsType) {
           selectedTags={selectedTags}
         />
       </div> */}
-      <div className='content-center align-center items-center text-xl md:text-2xl  ml-5 mt-20  flex flex-row'>
-        <AiOutlineCalendar className='mr-3 text-red-500'/>
+      <div className="align-center ml-5 mt-20 flex flex-row  content-center items-center  text-xl md:text-2xl">
+        <AiOutlineCalendar className="mr-3 text-red-500" />
         {selectedDay}, Amsterdam Party Agenda
-        </div>
+      </div>
 
       <div className="mb-10">
         <div className="mx-auto mt-5 mr-6 justify-end text-right ">
           <button
             className=" focus:dark:zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800"
-            onClick={() => setShow(!false)}
+            onClick={() => setShow(true)}
           >
             <BsGrid3X3 className="h-5 w-5" />
           </button>
           <button
             className=" focus:dark-zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800 active:dark:bg-zinc-800"
-            onClick={() => setShow(!true)}
+            onClick={() => setShow(false)}
           >
             <FaArrowsAltH className="h-5 w-5" />
           </button>
@@ -124,30 +120,6 @@ export default function IndexPage({ title, tags, slug }: PropsType) {
       </div> */}
     </div>
   )
-}
-
-type PageType = {
-  title: string
-}
-
-export type TagType = {
-  _id: string
-  name: string
-  color: string
-}
-
-export type EventInfo = {
-  _id: string
-  eventImage: { asset: SanityImageSource }
-  eventDate: Date
-  eventName: string
-  tags: TagType[]
-  eventTime: string
-  eventClub: string
-  eventAddress: string
-  eventPrice: number
-  eventUrl: string
-  slug: string
 }
 
 // initial loading datas like page header and all existing tags

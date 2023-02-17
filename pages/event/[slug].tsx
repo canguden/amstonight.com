@@ -1,15 +1,25 @@
-import { groq } from "next-sanity"
+import { useRouter } from 'next/router'
+import { getEventsBySlug } from '../../sanity/lib/client'
+import { useCallback, useEffect, useState } from 'react'
+import { EventInfo } from '../../models/EventInfo'
 
-*[_type='event' && slug.current == ${params.event}]
-const Event = () => {
-  return (
-    <div>
-      event
-{/* params: id slug --> fetch */}
+export default async function Slug() {
+  const [eventState, setEventState] = useState<EventInfo>()
 
+  const fetchEvent = useCallback(async () => {
+    const event = await getEventsBySlug(slug)
+    if (!event) return
+    setEventState(event)
+  }, [])
 
-    </div>
-  )
+  useEffect(() => {
+    fetchEvent()
+  }, [fetchEvent])
+
+  const router = useRouter()
+  const slug = router.query?.slug as string
+
+  console.log(eventState)
+
+  return <div> hallo</div>
 }
-
-export default Event
