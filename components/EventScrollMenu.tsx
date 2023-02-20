@@ -66,7 +66,7 @@ const LeftArrow = () => {
 
   return (
     <Arrow disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
-      <FaChevronLeft className="h-5 w-5" />
+      <FaChevronLeft className="ml-5 h-6 w-6 py-1 px-1 bg-gray-300 dark:text-gray-700 dark:bg-white rounded-full" />
     </Arrow>
   )
 }
@@ -75,7 +75,7 @@ const RightArrow = () => {
 
   return (
     <Arrow disabled={isLastItemVisible} onClick={() => scrollNext()}>
-      <FaChevronRight className="h-5 w-5" />
+      <FaChevronRight className="ml-3 h-6 w-6 py-1 px-1 bg-gray-300 dark:text-gray-700 dark:bg-white rounded-full" />
     </Arrow>
   )
 }

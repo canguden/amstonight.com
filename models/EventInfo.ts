@@ -9,7 +9,9 @@ export type EventInfo = {
   eventName: string
   tags: TagType[]
   eventTime: string
+  eventDescription: string
   eventClub: string
+  eventMusic: string
   eventAddress: string
   eventPrice: number
   eventUrl: string

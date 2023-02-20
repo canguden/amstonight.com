@@ -44,6 +44,14 @@ export default defineType({
     }),
 
     defineField({
+      title: 'Description',
+      name: 'description',
+      type: 'string',
+      description: 'Event Description',
+      validation: (rule) => rule.required(),
+    }),
+
+    defineField({
       title: 'Club',
       name: 'club',
       type: 'string',

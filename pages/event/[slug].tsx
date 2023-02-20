@@ -1,9 +1,13 @@
-import { useRouter } from 'next/router'
-import Image from 'next/image'
-import { client, getEventsBySlug } from '../../sanity/lib/client'
-import { EventInfo } from '../../models/EventInfo'
-import { useEffect, useState } from 'react'
-import { useNextSanityImage } from 'next-sanity-image'
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import { client, getEventsBySlug } from '../../sanity/lib/client';
+import { EventInfo } from '../../models/EventInfo';
+import { useEffect, useState } from 'react';
+import { useNextSanityImage } from 'next-sanity-image';
+import { IoMdArrowRoundBack } from 'react-icons/io';
+import { HiOutlineMapPin } from 'react-icons/hi2';
+import { FaMapMarked, FaMusic, FaRegClock } from 'react-icons/fa';
 
 export default function Slug() {
   const [eventState, setEventState] = useState<EventInfo | null>(null)
@@ -27,36 +31,63 @@ export default function Slug() {
 
   // hack omdat hij blijkbaar al geladen word voor image gezet is, duurt heel even blijkbaar
   if (!image?.src) {
-    return <div>Image heeft geen src</div>
+    return 
   }
 
   return (
     <>
-      <a
-        href="#"
-        className="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:max-w-xl md:flex-row"
+
+      <div
+        className="mx-auto h-screen justify-center"
       >
         <Image
-          className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+          className="h-96 w-full object-cover md:h-auto  rounded-xl"
           src={image?.src}
           loader={image?.loader}
           width={1024}
           height={800}
           alt=""
         />
-        <div className="flex flex-col justify-between p-4 leading-normal">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {eventState?.eventName} @{eventState?.eventClub}
-          </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Hier meer informatie
-          </p>
-        </div>
-      </a>
 
-      <button type="button" onClick={() => router.back()}>
-        Click here to go back
-      </button>
+
+        <div className="flex flex-col justify-between p-2 leading-normal">
+          <h5 className="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {eventState?.eventName} 
+          </h5>
+
+          <hr/>
+
+
+          <div className="flex flex-row mt-5 text-2xl">
+          <HiOutlineMapPin className='content-center mt-1' />  {eventState?.eventClub}
+        </div>
+   
+        <div className="flex mt-5 text-xl flex-row">
+        <FaMapMarked className='content-center mt-1 mr-2' />{eventState?.eventAddress}
+        </div>
+ 
+        <div className="flex mt-5 text-xl flex-row">
+        <FaRegClock className='content-center mt-1 mr-2' />{eventState?.eventTime}
+        </div>
+
+        <div className="flex mt-5 text-xl flex-row">
+        <FaMusic className='content-center mt-1 mr-2' />{eventState?.eventMusic}
+        </div>
+
+        <div className="flex text-xl font-bold justify-end text-md items-center">
+<div className="flex flex-grow">
+        € {eventState?.eventPrice}
+        </div>
+          <button className='w-50 mt-5 text-white dark:text-white bg-blue-500 dark:bg-blue-500 rounded-lg px-2 py-2'>
+          <Link href={eventState?.eventUrl} target="_blank">
+              Get Tickets
+            </Link>
+            </button>
+          </div>
+
+
+        </div>
+      </div>
     </>
   )
 }

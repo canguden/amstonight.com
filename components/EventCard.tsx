@@ -14,6 +14,7 @@ import { EventInfo } from '../pages/index'
 import { client } from '../sanity/lib/client'
 // import { Tags } from './'
 import { FaFacebook } from 'react-icons/fa'
+import { HiOutlineMapPin } from 'react-icons/hi2'
 
 type PropsType = {
   // setSelectedTag: Dispatch<SetStateAction<string[]>>
@@ -34,6 +35,7 @@ export const EventCard: React.FC<PropsType> = ({
     eventName,
     eventPrice,
     eventClub,
+    eventDescription,
     eventMusic,
     eventUrl,
     slug,
@@ -74,37 +76,20 @@ export const EventCard: React.FC<PropsType> = ({
       <div className="absolute mb-0 top-0 rounded-tl-md rounded-br-md text-md bg-black py-2 px-1 md:py-3  font-bold text-white">
         {dayMonth}
       </div>
-      <div className="rounded-b-xl h-68 w-38">
-        <div className="flex flex-col justify-start  text-xl font-bold">
-          {eventName}
-          <div className=" text-lg text-gray-500  mb-1 font-semibold">{eventClub}</div>
-        </div>
 
-        <div className="flex items-center gap-2">
-          <div className="text-md font-thin">{eventAddress}</div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <div className="my-1   text-md font-thin">{eventTime}</div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <div className=" text-md font-thin">{eventMusic}</div>
-        </div>
-
-
-        <div className="flex justify-between items-center gap-1">
-          <div className="flex tezt-md items-center text-gray-500">
-          <Link href={eventUrl} target="_blank">
-              Learn More
-            </Link>
+      <div className=" flex items-center gap-2">
+            <div className="text-sm font-thin">{selectedDay} | {eventTime}</div>
           </div>
-            <div className="mx-1 items-center flex flex-row content-center text-black dark:text-white font-semibold"><IoTicketOutline className="h-4 w-4 mr-1 justify-end" />
 
-              {price}
-            
+        <div className="h-38 w-68 rounded-b-xl ">
+          <div className=" flex flex-col justify-start text-xl font-bold">
+            {eventName}
+            <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
+             <HiOutlineMapPin className='content-center mt-1' /> {eventClub}
             </div>
           </div>
+
+
           </div>
           </Link>
           </div>

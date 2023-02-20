@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import { Jost } from '@next/font/google'
 import { AppProps } from 'next/app'
 import SideBar from 'components/SideBar'
-import Advert from 'components/Advert'
+import Ad from 'components/Ad'
 
 const sans = Jost({
   variable: '--font-sans',
@@ -27,11 +27,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider enableSystem={true} attribute="class">
         <SideBar />
         <Header />
-        <Advert />
-        <div className="m-auto sm:max-w-3xl">
+        <Ad />
+        <div className="m-auto sm:max-w-3xl mt-10">
           <Component {...pageProps} />
         </div>
+        <div className='flex-grow w-full fixed bottom-0'>
         <Footer />
+        </div>
       </ThemeProvider>
     </>
   )
