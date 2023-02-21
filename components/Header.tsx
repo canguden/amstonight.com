@@ -3,6 +3,7 @@ import ThemeChanger from './ThemeChanger'
 import { useState, useEffect } from 'react'
 
 
+
 const Header = () => {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
@@ -16,7 +17,7 @@ const Header = () => {
       
       <div className="2xl:hidden flex justify-start text-center">
           <Link href='/'>
-            <h1 className='text-lg font-bold md:font-bold ml-3 md:ml-2 md:text-2xl'>AmsTonight</h1>
+            <h1 className='text-2xl font-bold md:font-bold ml-3 md:ml-2 md:text-2xl'>AmsTonight</h1>
             </Link>
           </div>
 

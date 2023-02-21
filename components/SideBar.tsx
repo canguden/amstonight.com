@@ -12,14 +12,14 @@ const SideBar = () => {
 
 
 return (
-<div className="hidden xl:fixed xl:top-0  xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-gray-800 xl:h-full 2xl:flex ">
+<div className="hidden z-50 xl:fixed xl:top-0  xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-gray-800 xl:h-full 2xl:flex ">
 
 <div className='bg-gray-200 dark:bg-black w-96 '>
       <h1 className='text-lg  font-bold md:font-bold ml-8 px-2 mt-10 md:text-2xl'>AmsTonight</h1>
       <div className="flex flex-col ml-8 ">
 
 <div className=''>
-      <Link href='/'  className="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-10 flex-row content-center text-black dark:text-white font-semibold">
+      <Link href='/'  className="hover:bg-gray-300 dark:hover:bg-zinc-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-10 flex-row content-center text-black dark:text-white font-semibold">
             <AiFillHome className="h-7 w-7 mr-3 justify-end" />
             Home
 </Link>
@@ -27,17 +27,17 @@ return (
 
 
 
-      <Link href='./explore'  className="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-3 flex-row content-center text-black dark:text-white font-semibold"><FaCompass className="h-7 w-7 mr-3 justify-end" />
+      <Link href='/explore'  className="hover:bg-gray-300 dark:hover:bg-zinc-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-3 flex-row content-center text-black dark:text-white font-semibold"><FaCompass className="h-7 w-7 mr-3 justify-end" />
 
 Explore
 
 </Link>
-<Link href='./festivals'  className="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-5 flex-row content-center text-black dark:text-white font-semibold"><MdFestival className="h-7 w-7 mr-3 justify-end" />
+<Link href='/festivals'  className="hover:bg-gray-300 dark:hover:bg-zinc-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-5 flex-row content-center text-black dark:text-white font-semibold"><MdFestival className="h-7 w-7 mr-3 justify-end" />
 
 Festivals
 
 </Link>
-<Link href='./featured'  className="hover:bg-gray-300 dark:hover:bg-gray-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-5 flex-row content-center text-black dark:text-white font-semibold"><FaStar className="h-7 w-7 mr-3 justify-end" />
+<Link href='/featured'  className="hover:bg-gray-300 dark:hover:bg-zinc-900 rounded-full py-2 px-2 mr-3 items-center text-md flex mt-5 flex-row content-center text-black dark:text-white font-semibold"><FaStar className="h-7 w-7 mr-3 justify-end" />
 
 Featured
 

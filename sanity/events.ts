@@ -44,12 +44,24 @@ export default defineType({
     }),
 
     defineField({
+      title: 'Adress link',
+      name: 'addressUrl',
+      type: 'url',
+    }),
+
+    defineField({
       title: 'Description',
       name: 'description',
       type: 'string',
       description: 'Event Description',
       validation: (rule) => rule.required(),
     }),
+
+    {
+      title: 'Content', 
+      name: 'content',
+      type: 'string', 
+    },
 
     defineField({
       title: 'Club',

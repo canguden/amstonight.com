@@ -5,12 +5,10 @@ import React, { useEffect } from 'react'
 import { useNextSanityImage } from 'next-sanity-image'
 import { Dispatch, SetStateAction } from 'react'
 
-import { IoTicket, IoTicketOutline } from 'react-icons/io5'
 
 import { EventInfo } from '../models/EventInfo'
 import { client } from '../sanity/lib/client'
 import { HiOutlineMapPin } from 'react-icons/hi2'
-import { FaTicketAlt } from 'react-icons/fa'
 // import { Tags } from './'
 
 type PropsType = {
@@ -35,6 +33,7 @@ export const EventsList: React.FC<PropsType> = ({
     eventClub,
     eventMusic,
     eventUrl,
+    addressUrl,
     slug,
     eventTime,
     tags,
@@ -80,7 +79,7 @@ export const EventsList: React.FC<PropsType> = ({
           <div className=" flex flex-col justify-start text-xl font-bold">
             {eventName}
             <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-             <HiOutlineMapPin className='content-center mt-1' /> {eventClub}
+             <HiOutlineMapPin className='content-center mt-1 text-red-500' /> {eventClub}
             </div>
           </div>
           </div>

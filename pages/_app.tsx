@@ -27,8 +27,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider enableSystem={true} attribute="class">
         <SideBar />
         <Header />
-        <Ad />
-        <div className="m-auto sm:max-w-3xl mt-10">
+        {/* <Ad /> */}
+        <div className="m-auto  sm:max-w-3xl mt-10">
           <Component {...pageProps} />
         </div>
         <div className='flex-grow w-full fixed bottom-0'>

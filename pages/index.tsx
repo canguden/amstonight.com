@@ -38,7 +38,7 @@ export default function IndexPage({ title, tags, slug }: PropsType) {
         : selectedTags.map((el) => `"${el}"`).join(', ')
 
     const eventsQuery = groq`*[_type == 'event' && eventDate == '${selectedDate}' && eventTags[]->genre match [${match}]]
-      {_id, eventName, slug, eventPrice, eventUrl, 'eventDescription': description, 'eventMusic': music, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
+      {_id, eventName, slug, eventPrice, Description, eventUrl, addressUrl, eventDate, 'eventMusic': music, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
       eventImage {asset -> {..., metaData}},
       'tags': eventTags[]->{'name': genre, 'color': color.hex, _id}}`
 

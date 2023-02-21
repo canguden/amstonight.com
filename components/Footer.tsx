@@ -4,6 +4,7 @@ import {
   FaUser,
   FaHome,
   FaPinterest,
+  FaStar,
 }
 from 'react-icons/fa'
 import { MdFestival, MdOutlineRestaurant } from 'react-icons/md'
@@ -15,7 +16,7 @@ const Footer = () => {
 
 
   return (
-    <div className='2xl:hidden py-5 sticky z-50 bottom-0 border-t border-gray-200 dark:border-gray-800
+    <div className='2xl:hidden py-5 sticky z-50 bottom-0  border-t border-gray-300 dark:border-gray-800
       bg-gray-100 dark:bg-black '>
 
 
@@ -24,7 +25,7 @@ const Footer = () => {
     <FaHome className='h-6 w-6'/>
   </Link>
   
-  <Link href="#">
+  <Link href="./explore">
     <FaCompass className='h-6 w-6'/>
   </Link>
 
@@ -33,7 +34,7 @@ const Footer = () => {
   </Link>
 
   <Link href="#">
-    <MdOutlineRestaurant className='h-6 w-6'/>
+    <FaStar className='h-6 w-6'/>
   </Link>
   </div>
 
