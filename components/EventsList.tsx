@@ -79,7 +79,7 @@ export const EventsList: React.FC<PropsType> = ({
           <div className=" flex flex-col justify-start text-xl font-bold">
             {eventName}
             <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-             <HiOutlineMapPin className='content-center mt-1 text-red-500' /> {eventClub}
+             <HiOutlineMapPin className='content-center mt-1 mr-1 text-red-500' /> {eventClub}
             </div>
           </div>
           </div>

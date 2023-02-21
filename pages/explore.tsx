@@ -6,7 +6,7 @@ import { HiOutlineMapPin } from 'react-icons/hi2'
 
 const explore = () => {
   return (
-    <div className="my-2 min-h-screen">
+    <div className="my-2 min-h-screen mb-20">
             <div className='text-2xl ml-5'>Popular Bars</div>
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
