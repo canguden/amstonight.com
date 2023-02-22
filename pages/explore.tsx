@@ -11,7 +11,7 @@ const explore = () => {
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./waterkant.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -20,10 +20,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Waterkant
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                Marnixstraat
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ const explore = () => {
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./palladium.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -41,10 +41,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Palladium
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                Leidseplein
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ const explore = () => {
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./lokaal.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -61,10 +61,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Local of the City
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                Hoofddorpplein
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const explore = () => {
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./thebutcher.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -85,10 +85,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              The Butcher
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                Albert Cuyp
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ const explore = () => {
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./salmuera.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -106,10 +106,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Salmuera
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                Rozengracht
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ const explore = () => {
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./thebutcher.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -126,10 +126,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              The Butcher
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                Albert Cuyp
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@ const explore = () => {
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./cent.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -150,10 +150,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Coffee & Coconuts
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                de Pijp
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ const explore = () => {
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./party.jpeg"
+            src="./scanemb.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -171,10 +171,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Scandinavian Embassy
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
-                <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
+                de Pijp
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ const SideBar = () => {
 
   return (
     <div className="z-50 hidden xl:fixed xl:top-0  xl:h-full xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-gray-800 2xl:flex ">
-      <div className="w-96 bg-gray-200 dark:bg-black ">
+      <div className="w-96 bg-gray-100 dark:bg-black ">
         <h1 className="ml-8  mt-10 px-2 text-lg font-bold md:text-2xl md:font-bold">
           AmsTonight
         </h1>

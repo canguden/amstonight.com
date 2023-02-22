@@ -1,5 +1,4 @@
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'
-import Featured from 'components/Featured'
 import { format, getMonth } from 'date-fns'
 import { GetServerSideProps } from 'next'
 import { groq } from 'next-sanity'
@@ -14,13 +13,14 @@ import { BsGrid3X3 } from 'react-icons/bs'
 import { AiOutlineCalendar } from 'react-icons/ai'
 import { TagType } from '../models/TagType'
 import {EventInfo} from "../models/EventInfo";
+import { PageType } from 'models/PageType'
 
 type PropsType = {
   title: string
   tags: TagType[]
 }
 
-export default function IndexPage({ title, tags, slug }: PropsType) {
+export default function IndexPage({ title, tags }: PropsType) {
   const currentDate = new Date()
   const monthIndex = getMonth(currentDate)
   const today = currentDate.toDateString()

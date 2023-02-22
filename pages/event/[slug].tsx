@@ -44,26 +44,28 @@ export default function Slug() {
       </div>
       <div className="mx-auto h-screen justify-center">
         <Image
-          className="h-76 w-full rounded-xl object-cover  md:h-auto"
+          className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
           src={image?.src}
           loader={image?.loader}
           width={1024}
           height={800}
           alt=""
         />
-        <div className="flex flex-col justify-between p-2 leading-normal">
+        <div className="flex flex-col justify-between mx-2 md:mx-0 p-2 leading-normal">
             <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-3xl">
               {eventState?.eventName} - {eventState?.eventClub}
             </h5>
 
           <hr/>
 
-          <Link href={eventState?.addressUrl} target="_blank">
+
             <div className="flex flex-row mt-5 hover:text-blue-500">
+            <Link href={eventState?.addressUrl} target="_blank"><div className='flex flex-row'>
               <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
               {eventState?.eventAddress}
+              </div>
+              </Link>
             </div>
-          </Link>
 
           <div className="mt-5 flex flex-row">
             <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-red-500" />{' '}
