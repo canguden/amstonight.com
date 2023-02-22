@@ -20,7 +20,7 @@ export async function getEventsBySlug(slug: string): Promise<EventInfo | null> {
     slug: slug,
   }
 
-  let query = groq`*[_type == 'event' && slug.current == $slug] {_id, eventName, slug, eventPrice, eventUrl, addressUrl, eventDate, 'Content': content, 'Description': description, 'eventMusic': music, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
+  let query = groq`*[_type == 'event' && slug.current == $slug] {_id, eventName, slug, eventPrice, eventUrl, addressUrl, eventDate, 'Content': content, 'Description': description, 'eventMusic': music, 'Age': age, 'eventClub': club, 'eventTime': timePeriod, 'eventAddress': address, 
       eventImage {asset -> {..., metaData}},
       'tags': eventTags[]->{'name': genre, 'color': color.hex, _id}}`
 

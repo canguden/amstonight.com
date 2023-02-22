@@ -64,6 +64,12 @@ export default defineType({
     },
 
     defineField({
+      title: 'Age',
+      name: 'age',
+      type: 'string',
+    }),
+
+    defineField({
       title: 'Club',
       name: 'club',
       type: 'string',

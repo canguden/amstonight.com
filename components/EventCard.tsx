@@ -77,17 +77,21 @@ export const EventCard: React.FC<PropsType> = ({
         {dayMonth}
       </div>
 
-      <div className=" flex items-center gap-2">
-            <div className="text-sm font-thin">{selectedDay} | {eventTime}</div>
+      <div className=" flex items-center mt-2 gap-2">
+            <div className="text-md font-thin text-gray-600 dark:text-gray-400">{selectedDay} | {eventTime}</div>
           </div>
 
         <div className="h-38 w-68 rounded-b-xl ">
           <div className=" flex flex-col justify-start text-xl font-bold">
             {eventName}
-            <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
+            <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-600 dark:text-gray-400">
              <HiOutlineMapPin className='content-center mt-1 mr-1  text-red-500' /> {eventClub}
             </div>
           </div>
+
+          <div className=" mt-1 flex flex-row text-sm font-semibold text-gray-600 dark:text-gray-400">
+             <FaMusic className='content-center mt-1 mr-2  text-red-500' /> {eventMusic}
+            </div>
 
 
           </div>

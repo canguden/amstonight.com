@@ -11,6 +11,7 @@ export type EventInfo = {
   eventTime: string
   Content: string
   Description: string
+  Age: string,
   eventClub: string
   eventMusic: string
   eventAddress: string

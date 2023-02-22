@@ -1,141 +1,214 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaStar, FaRegClock, FaMusic } from 'react-icons/fa'
-import { BsPinMap } from 'react-icons/bs'
+import { FaStar, FaRegClock, FaMusic, FaHeadphones, FaEuroSign } from 'react-icons/fa'
+import { BsFillInfoSquareFill, BsPinMap } from 'react-icons/bs'
 import { IoTicketOutline, IoArrowRedoSharp } from 'react-icons/io5'
+import { AiFillCloseCircle } from 'react-icons/ai'
+import { SiGooglemaps } from 'react-icons/si'
+import { HiCalendar } from 'react-icons/hi2'
+import { GiAges } from 'react-icons/gi'
 
 const Featured = () => {
   return (
-    <section className="mt-1">
-      <div className="mx-2 my-5 flex flex-row  items-center px-5 py-10 text-3xl  font-semibold">
-        <h1>Featured</h1>
-      </div>
-      <div className="relative mx-auto w-[500px] max-w-4xl">
-        <div className="absolute top-0 right-0 rounded-tr-lg rounded-bl-lg bg-white/20 px-4 py-4 font-bold text-white backdrop-blur-sm">
-          <FaStar className="h-8 w-8 text-yellow-500" />
+    <>
+
+    <div className="mx-auto  h-screen justify-center">
+      <img
+        className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+        src='./aoa.jpg'
+        width={1024}
+        height={800}
+        alt="openair"
+      />
+      <div className="flexflex-col justify-between mx-2 md:mx-0 p-2 leading-normal">
+          <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-purple-500 md:text-3xl">
+            Amsterdam Open Air 2023 - Gaasperpark
+          </h5>
+
+        <hr />
+
+
+          <div className="flex flex-row mt-5 hover:text-blue-500">
+          <Link href="https://www.openair.com" target="_blank"><div className='flex flex-row'>
+            <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-purple-500" />
+            Gaasperpark, Amsterdam
+            </div>
+            </Link>
+          </div>
+
+        <div className="mt-5 flex flex-row">
+          <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-purple-500" />{' '}
+          3 - 4 June 2023
+          <div className="ml-2 flex flex-col">12:00 - 23:00</div>
         </div>
-        <div className="absolute top-0 left-0 rounded-br-xl rounded-tl-xl  bg-red-500 py-2 px-1 font-bold text-white md:py-4 md:px-2">
-          17 April
+
+        <div className="mt-5 flex flex-row text-xl">
+          <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-purple-500" />
         </div>
 
-        <img
-          className="mx-auto rounded-tr-xl rounded-tl-xl"
-          src="/encore.jpg"
-          alt="logo"
-          width="700"
-          height="700"
-        />
-        <div className="rounded-b-lg  bg-white dark:bg-zinc-800">
-          <div className="mx-2 mb-2 flex flex-col justify-start  text-2xl font-bold">
-            Overbruggen
-            <div className=" text-xl font-semibold text-gray-500">Melkweg</div>
+        <div className="flex max-w-3xl ml-6 flex-row">Every year, in the first weekend of June, a collaboration of friends takes place in Amsterdam&apos;s Gaasperpark. A selection of Amsterdam&apos;s hottest promoters join-up to create a fashion forward festival that reflects the nightlife and art culture in our capital city, being a platform for local talent. Along with a culinary festival kitchen, creative collectives and a cosy four day camping, the visitors experience a weekend full of creativity, friendship and musical expression at Amsterdam Open Air.</div>
+
+        <div className="mt-5 flex font-semibold flex-row">
+          <FaHeadphones className="mr-2 h-5 w-5 content-center text-purple-500" />
+          Astra Club,
+          Claude,
+          De Jeugd Van Tegenwoordig,
+          Dj Daisy,
+          Froukje,
+          Kilimanjaro,
+          Luuk van Dijk,
+          Sim—oj
+        </div>
+
+        <div className="mt-10 flex flex-row mb-20">
+          <div className="flex flex-grow items-center  justify-start text-xl">
+            <FaEuroSign className='mr-2 h-5 w-5 content-center text-purple-500' /> 75 - 120
           </div>
 
-          <div className="m-1 flex items-center gap-2">
-            <BsPinMap className="h-8 w-8 text-gray-400" />
-            <div className="my-1 text-lg font-thin md:text-xl">
-              Leidsedwarstraat 12, Amsterdam
-            </div>
-          </div>
-
-          <div className="m-1 flex items-center gap-2">
-            <FaRegClock className="h-8 w-8 text-gray-400" />
-            <div className="my-1 text-xl font-thin md:text-xl">
-              22:00 - 05:00
-            </div>
-          </div>
-
-          <div className="m-1 flex items-center gap-2">
-            <FaMusic className="h-8 w-8 text-gray-500" />
-            <div className=" text-xl font-thin">Hiphop, R&B, Latin</div>
-          </div>
-
-          <div className="m-auto flex items-center justify-between gap-2">
-            <div className="flex items-center">
-              <IoTicketOutline className="h-8 w-8 text-gray-400" />
-              <div className="my-1 mx-1 text-lg font-semibold md:text-xl">
-                € 16,50
-              </div>
-            </div>
-            <div>
-              <Link href="/" target="_blank">
-                <div className="flex cursor-pointer items-center ">
-                  <button className="m-auto  my-2 mx-2 flex items-center rounded-lg bg-blue-500  py-2 px-2  font-bold text-white">
-                    <div className="items my-1 font-semibold md:text-sm">
-                      Get Tickets
-                    </div>
-                    <IoArrowRedoSharp className="ml-1 mt-1 h-5 w-5 " />
-                  </button>
-                </div>
+          <div className="flex justify-end">
+            <button className="rounded-full bg-purple-500 px-6 py-2 text-white hover:bg-purple-600">
+              <Link href="https://www.openair.com" target="_blank">
+                Get Tickets
               </Link>
-            </div>
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <div className="relative mx-auto mt-10 w-[500px] max-w-4xl">
-        <div className="absolute top-0 right-0 rounded-tr-lg rounded-bl-lg bg-white/20 px-4 py-4 font-bold text-white backdrop-blur-sm">
-          <FaStar className="h-8 w-8 text-yellow-500" />
+{/* Mystic Garden */}
+
+    <div className="mx-auto mt-10 h-screen justify-center">
+      <img
+        className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+        src='./mysticgarden.jpg'
+        width={1024}
+        height={800}
+        alt="openair"
+      />
+      <div className="flexflex-col justify-between mx-2 md:mx-0 p-2 leading-normal">
+          <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-green-500 md:text-3xl">
+            Mystic Garden Festival 2023
+          </h5>
+
+        <hr />
+
+
+          <div className="flex flex-row mt-5 hover:text-blue-500">
+          <Link href="https://www.openair.com" target="_blank"><div className='flex flex-row'>
+            <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-green-500" />
+            Sloterpark, Amsterdam
+            </div>
+            </Link>
+          </div>
+
+        <div className="mt-5 flex flex-row">
+          <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-green-500" />{' '}
+          3 - 4 June 2023
+          <div className="ml-2 flex flex-col">12:00 - 23:00</div>
         </div>
-        <div className="absolute top-0 left-0 rounded-br-xl rounded-tl-xl  bg-red-500 py-2 px-1 font-bold text-white md:py-4 md:px-2">
-          17 April
+
+        <div className="mt-5 flex flex-row text-xl">
+          <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-green-500" />
         </div>
 
-        <img
-          className="mx-auto rounded-tr-xl rounded-tl-xl"
-          src="/encore.jpg"
-          alt="logo"
-          width="700"
-          height="700"
-        />
-        <div className="rounded-b-lg  bg-white dark:bg-zinc-800">
-          <div className="mx-2 mb-2 flex flex-col justify-start  text-2xl font-bold">
-            Overbruggen
-            <div className=" text-xl font-semibold text-gray-500">Melkweg</div>
+        <div className="flex max-w-3xl ml-6 flex-row">Every year, in the first weekend of June, a collaboration of friends takes place in Amsterdam&apos;s Gaasperpark. A selection of Amsterdam&apos;s hottest promoters join-up to create a fashion forward festival that reflects the nightlife and art culture in our capital city, being a platform for local talent. Along with a culinary festival kitchen, creative collectives and a cosy four day camping, the visitors experience a weekend full of creativity, friendship and musical expression at Amsterdam Open Air.</div>
+
+        <div className="mt-5 flex font-semibold flex-row">
+          <FaHeadphones className="mr-2 h-5 w-5 content-center text-green-500" />
+          Astra Club,
+          Claude,
+          De Jeugd Van Tegenwoordig,
+          Dj Daisy,
+          Froukje,
+          Kilimanjaro,
+          Luuk van Dijk,
+          Sim—oj
+        </div>
+
+        <div className="mt-10 flex flex-row mb-20">
+          <div className="flex flex-grow items-center  justify-start text-xl">
+            <FaEuroSign className='mr-2 h-5 w-5 content-center text-green-500' /> 75 - 120
           </div>
 
-          <div className="m-1 flex items-center gap-2">
-            <BsPinMap className="h-8 w-8 text-gray-400" />
-            <div className="my-1 text-lg font-thin md:text-xl">
-              Leidsedwarstraat 12, Amsterdam
-            </div>
-          </div>
-
-          <div className="m-1 flex items-center gap-2">
-            <FaRegClock className="h-8 w-8 text-gray-400" />
-            <div className="my-1 text-xl font-thin md:text-xl">
-              22:00 - 05:00
-            </div>
-          </div>
-
-          <div className="m-1 flex items-center gap-2">
-            <FaMusic className="h-8 w-8 text-gray-500" />
-            <div className=" text-xl font-thin">Hiphop, R&B, Latin</div>
-          </div>
-
-          <div className="m-auto flex items-center justify-between gap-2">
-            <div className="flex items-center">
-              <IoTicketOutline className="h-8 w-8 text-gray-400" />
-              <div className="my-1 mx-1 text-lg font-semibold md:text-xl">
-                € 16,50
-              </div>
-            </div>
-            <div>
-              <Link href="/" target="_blank">
-                <div className="flex cursor-pointer items-center ">
-                  <button className="m-auto  my-2 mx-2 flex items-center rounded-lg bg-blue-500  py-2 px-2  font-bold text-white">
-                    <div className="items my-1 font-semibold md:text-sm">
-                      Get Tickets
-                    </div>
-                    <IoArrowRedoSharp className="ml-1 mt-1 h-5 w-5 " />
-                  </button>
-                </div>
+          <div className="flex justify-end">
+            <button className="rounded-full bg-green-500 px-6 py-2 text-white hover:bg-green-600">
+              <Link href="https://www.openair.com" target="_blank">
+                Get Tickets
               </Link>
-            </div>
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+
+{/* Loveland */}
+
+    <div className="mx-auto mt-10 h-screen justify-center">
+      <img
+        className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+        src='./loveland.jpg'
+        width={1024}
+        height={800}
+        alt="openair"
+      />
+      <div className="flexflex-col justify-between mx-2 md:mx-0 p-2 leading-normal">
+          <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-cyan-500 md:text-3xl">
+            Loveland Festival 2023
+          </h5>
+
+        <hr />
+
+
+          <div className="flex flex-row mt-5 hover:text-cyan-500">
+          <Link href="https://www.openair.com" target="_blank"><div className='flex flex-row'>
+            <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-cyan-500" />
+            Sloterpark, Amsterdam
+            </div>
+            </Link>
+          </div>
+
+        <div className="mt-5 flex flex-row">
+          <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-cyan-500" />{' '}
+          3 - 4 June 2023
+          <div className="ml-2 flex flex-col">12:00 - 23:00</div>
+        </div>
+
+        <div className="mt-5 flex flex-row text-xl">
+          <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-cyan-500" />
+        </div>
+
+        <div className="flex max-w-3xl ml-6 flex-row">Every year, in the first weekend of June, a collaboration of friends takes place in Amsterdam&apos;s Gaasperpark. A selection of Amsterdam&apos;s hottest promoters join-up to create a fashion forward festival that reflects the nightlife and art culture in our capital city, being a platform for local talent. Along with a culinary festival kitchen, creative collectives and a cosy four day camping, the visitors experience a weekend full of creativity, friendship and musical expression at Amsterdam Open Air.</div>
+
+        <div className="mt-5 flex font-semibold flex-row">
+          <FaHeadphones className="mr-2 h-5 w-5 content-center text-cyan-500" />
+          Astra Club,
+          Claude,
+          De Jeugd Van Tegenwoordig,
+          Dj Daisy,
+          Froukje,
+          Kilimanjaro,
+          Luuk van Dijk,
+          Sim—oj
+        </div>
+
+        <div className="mt-10 flex flex-row mb-20">
+          <div className="flex flex-grow items-center  justify-start text-xl">
+            <FaEuroSign className='mr-2 h-5 w-5 content-center text-cyan-500' /> 75 - 120
+          </div>
+
+          <div className="flex justify-end">
+            <button className="rounded-full bg-cyan-500 px-6 py-2 text-white hover:bg-cyan-600">
+              <Link href="https://www.openair.com" target="_blank">
+                Get Tickets
+              </Link>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </>
   )
 }
 

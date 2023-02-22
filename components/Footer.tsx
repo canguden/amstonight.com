@@ -5,6 +5,7 @@ import {
   FaHome,
   FaPinterest,
   FaStar,
+  FaCrown,
 }
 from 'react-icons/fa'
 import { MdFestival, MdOutlineRestaurant } from 'react-icons/md'
@@ -29,12 +30,12 @@ const Footer = () => {
     <FaCompass className='h-6 w-6'/>
   </Link>
 
-  <Link href="#">
+  <Link href="./festivals">
     <MdFestival className='h-6 w-6'/>
   </Link>
 
-  <Link href="#">
-    <FaStar className='h-6 w-6'/>
+  <Link href="./kingsday">
+    <FaCrown className='h-6 w-6 text-orange-500'/>
   </Link>
   </div>
 

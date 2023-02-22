@@ -10,6 +10,7 @@ import { HiCalendar } from 'react-icons/hi2'
 import { FaEuroSign, FaHeadphones, FaMusic } from 'react-icons/fa'
 import { SiGooglemaps } from 'react-icons/si'
 import { BsFillInfoSquareFill } from 'react-icons/bs'
+import { GiAges } from 'react-icons/gi'
 
 export default function Slug() {
   const [eventState, setEventState] = useState<EventInfo | null>(null)
@@ -78,6 +79,11 @@ export default function Slug() {
           </div>
 
           <div className="flex max-w-3xl ml-6 flex-row">{eventState?.Content}</div>
+
+          <div className="mt-5 flex flex-row">
+            <GiAges className="mr-2 h-5 w-5 content-center text-red-500" />
+            {eventState?.Age}
+          </div>
 
           <div className="mt-5 flex flex-row">
             <FaMusic className="mr-2 h-5 w-5 content-center text-red-500" />
