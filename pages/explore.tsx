@@ -117,7 +117,7 @@ const explore = () => {
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
           <img
-            src="./thebutcher.jpg"
+            src="./mondi.jpg"
             width={440}
             height={540}
             alt="alt"
@@ -126,10 +126,10 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              The Butcher
+              Mondi
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
                 <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
-                Albert Cuyp
+                College Hotel
               </div>
             </div>
           </div>

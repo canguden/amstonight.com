@@ -64,7 +64,7 @@ const SideBar = () => {
             @amstonight
           </Link>
 
-          <div className="mr-3 mt-5 flex flex-row content-center items-center py-2 px-2 font-semibold text-black dark:text-white">
+          <div className="mr-3 mt-2 flex flex-row content-center items-center py-2 px-2 font-semibold text-black dark:text-white">
             <span className="mr-3 h-7 w-7">{mounted && <SideThemeChanger />} </span>
             </div>
           </div>

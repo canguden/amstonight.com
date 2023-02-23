@@ -45,7 +45,8 @@ export const Day: React.FC<PropsType> = ({
         className={cn(
           'select-none  border-2 border-gray-300 dark:border-gray-800 border-lg mx-2 w-[100px] cursor-pointer items-center justify-center 0 rounded py-2 px-2 font-bold hover:bg-red-500 hover:text-white dark:hover:bg-red-500 ',
           {
-            'bg-red-600 dark:bg-red-500 border-none hover:bg-red-500  dark:hover:bg-red-500 text-white': selected,
+            
+            'text-white dark:text-white bg-red-600 dark:bg-red-500 border-none hover:bg-red-500  dark:hover:bg-red-500': selected,
           }
         )}
         onClick={() => onClick(visibility)}
