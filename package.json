@@ -20,6 +20,7 @@
     "@sanity/demo": "^1.0.1",
     "@sanity/vision": "^3.1.4",
     "@tailwindcss/typography": "^0.5.8",
+    "@vercel/analytics": "^0.1.10",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "next": "^13.1.1",
