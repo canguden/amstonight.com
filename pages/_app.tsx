@@ -1,12 +1,12 @@
 import 'styles/global.css'
-import { ThemeProvider } from 'next-themes'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 import { Jost } from '@next/font/google'
-import { AppProps } from 'next/app'
 import SideBar from 'components/SideBar'
-import Ad from 'components/Ad'
+import { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes'
+
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const sans = Jost({
   variable: '--font-sans',

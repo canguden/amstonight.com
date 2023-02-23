@@ -1,20 +1,15 @@
 import { format } from 'date-fns'
+import { EventInfo } from 'models/EventInfo'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect } from 'react'
 import { useNextSanityImage } from 'next-sanity-image'
-import { Dispatch, SetStateAction } from 'react'
-
-import { FaRegClock } from "react-icons/fa";
+import { useEffect } from 'react'
 import { FaMusic } from "react-icons/fa";
-import { BsPinMap } from "react-icons/bs";
-import { IoTicketOutline, IoArrowRedoSharp } from "react-icons/io5";
-
-import { EventInfo } from '../pages/index'
-import { client } from '../sanity/lib/client'
 // import { Tags } from './'
 import { FaFacebook } from 'react-icons/fa'
 import { HiOutlineMapPin } from 'react-icons/hi2'
+
+import { client } from '../sanity/lib/client'
 
 type PropsType = {
   // setSelectedTag: Dispatch<SetStateAction<string[]>>
@@ -35,7 +30,6 @@ export const EventCard: React.FC<PropsType> = ({
     eventName,
     eventPrice,
     eventClub,
-    eventDescription,
     eventMusic,
     eventUrl,
     slug,
@@ -50,6 +44,7 @@ export const EventCard: React.FC<PropsType> = ({
 
   if (!slug) return null;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const imageProps = useNextSanityImage(client, eventImage.asset) // https://www.sanity.io/plugins/next-sanity-image
 
   const date = new Date(selectedDay)

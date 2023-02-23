@@ -1,15 +1,13 @@
 import { format } from 'date-fns'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
 import { useNextSanityImage } from 'next-sanity-image'
-import { Dispatch, SetStateAction } from 'react'
-
+import React, { useEffect } from 'react'
+import { FaMusic } from 'react-icons/fa'
+import { HiOutlineMapPin } from 'react-icons/hi2'
 
 import { EventInfo } from '../models/EventInfo'
 import { client } from '../sanity/lib/client'
-import { HiOutlineMapPin } from 'react-icons/hi2'
-import { FaMusic } from 'react-icons/fa'
 // import { Tags } from './'
 
 type PropsType = {
@@ -47,6 +45,7 @@ export const EventsList: React.FC<PropsType> = ({
 
   if (!slug) return null
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const imageProps = useNextSanityImage(client, eventImage.asset) // https://www.sanity.io/plugins/next-sanity-image
   const date = new Date(selectedDay)
   const dayMonth = format(date, 'd MMM').toUpperCase()
@@ -60,7 +59,7 @@ export const EventsList: React.FC<PropsType> = ({
       <Link href={`/event/${slug.current}`}>
         <Image
           src={imageProps?.src}
-          loader={imageProps?.loader}
+          loader={imageProps.loader}
           width={540}
           height={240}
           alt="alt"

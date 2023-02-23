@@ -1,8 +1,16 @@
+import cn from 'classnames'
+import Image from 'next/image'
+import Link from 'next/link'
+import { MouseEventHandler, useContext } from 'react'
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import cn from 'classnames'
-import { MouseEventHandler, useContext } from 'react'
 import { HiOutlineMapPin } from 'react-icons/hi2'
+
+
+const MyLoader = () => {
+  return ('')
+}
+
 
 const explore = () => {
   return (
@@ -10,8 +18,11 @@ const explore = () => {
             <div className='text-2xl ml-5'>Popular Bars</div>
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/EVKA7gqd8yUJbSdU7' target="_blank">
+          <Image
             src="./waterkant.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -27,12 +38,16 @@ const explore = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/oKS7TP9tGSyhoyXB9' target="_blank">
+          <Image
             src="./palladium.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -48,11 +63,15 @@ const explore = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/F1Ya9fvk6F8GV8Ld6' target="_blank">
+          <Image
             src="./lokaal.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -68,6 +87,7 @@ const explore = () => {
               </div>
             </div>
           </div>
+        </Link>
         </div>
       </ScrollMenu>
 
@@ -75,8 +95,11 @@ const explore = () => {
       <div className='text-2xl mt-20 ml-5'>Popular Restaurants</div>
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/dbsnT28Teo5AV2YT7' target="_blank">
+          <Image
             src="./thebutcher.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -92,12 +115,16 @@ const explore = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/HYebr7S88ykNUbQW7' target="_blank">
+          <Image
             src="./salmuera.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -113,11 +140,15 @@ const explore = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/ixezRtos4YGEnsi7A' target="_blank">
+          <Image
             src="./mondi.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -133,6 +164,7 @@ const explore = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
       </ScrollMenu>
 
@@ -140,8 +172,11 @@ const explore = () => {
       <div className='text-2xl mt-20 ml-5'>Popular Coffeeshops</div>
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/5GVWoMYkEZBMdE8dA' target="_blank">
+          <Image
             src="./cent.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -157,12 +192,16 @@ const explore = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
+        <Link href='https://goo.gl/maps/qeZfXJNudEFEiFa58' target="_blank">
+          <Image
             src="./scanemb.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -174,15 +213,19 @@ const explore = () => {
               Scandinavian Embassy
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
                 <HiOutlineMapPin className="mt-1 mr-1 content-center text-red-500" />{' '}
-                de Pijp
+                Sarphatipark
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-          <img
-            src="./party.jpeg"
+        <Link href='https://goo.gl/maps/F1Ya9fvk6F8GV8Ld6' target="_blank">
+          <Image
+            src="./backtoblack.jpg"
+            loader={MyLoader}
+            unoptimized={true}
             width={440}
             height={540}
             alt="alt"
@@ -191,13 +234,14 @@ const explore = () => {
 
           <div className="h-38 w-68 rounded-b-xl ">
             <div className=" flex flex-col justify-start text-xl font-bold">
-              eventname
+              Back to Black
               <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-500">
                 <HiOutlineMapPin className="mt-1 content-center text-red-500" />{' '}
-                club name
+                Weteringstraat 48
               </div>
             </div>
           </div>
+          </Link>
         </div>
       </ScrollMenu>
     </div>

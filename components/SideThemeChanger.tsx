@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
-import { FaMoon } from "react-icons/fa";
 import { BsFillSunFill } from "react-icons/bs";
+import { FaMoon } from "react-icons/fa";
 
 const SideThemeChanger = () => {
   const { resolvedTheme, setTheme } = useTheme();

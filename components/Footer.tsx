@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import {
   FaCompass,
-  FaUser,
+  FaCrown,
   FaHome,
   FaPinterest,
   FaStar,
-  FaCrown,
+  FaUser,
 }
 from 'react-icons/fa'
 import { MdFestival, MdOutlineRestaurant } from 'react-icons/md'
@@ -21,7 +21,7 @@ const Footer = () => {
       bg-white dark:bg-black '>
 
 
-<div className="flex flex-row justify-evenly items-center mx-auto max-w-4xl">
+<div className="flex flex-row justify-between pr-2 ml-5 mr-5 items-center mx-auto max-w-4xl">
   <Link href="/">
     <FaHome className='h-6 w-6'/>
   </Link>

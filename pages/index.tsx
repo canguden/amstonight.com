@@ -1,19 +1,18 @@
-import { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import { ListView } from 'components/ListView'
 import { format, getMonth } from 'date-fns'
+import { PageType } from 'models/PageType'
 import { GetServerSideProps } from 'next'
 import { groq } from 'next-sanity'
 import { useCallback, useEffect, useState } from 'react'
-import { ListView } from 'components/ListView'
+import { AiOutlineCalendar } from 'react-icons/ai'
+import { BsGrid3X3 } from 'react-icons/bs'
+import { FaArrowsAltH } from 'react-icons/fa'
 
 import { DaysScrollMenuItems, EventScrollMenu, Months } from '../components'
 import { MONTHS } from '../lib/constants'
-import { client } from '../sanity/lib/client'
-import { FaArrowsAltH } from 'react-icons/fa'
-import { BsGrid3X3 } from 'react-icons/bs'
-import { AiOutlineCalendar } from 'react-icons/ai'
-import { TagType } from '../models/TagType'
 import {EventInfo} from "../models/EventInfo";
-import { PageType } from 'models/PageType'
+import { TagType } from '../models/TagType'
+import { client } from '../sanity/lib/client'
 
 type PropsType = {
   title: string

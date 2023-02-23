@@ -1,4 +1,3 @@
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import cn from 'classnames'
 import {
   Dispatch,
@@ -8,6 +7,7 @@ import {
   useMemo,
 } from 'react'
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 import { getDates } from '../lib/utils'
 import { Day } from '.'

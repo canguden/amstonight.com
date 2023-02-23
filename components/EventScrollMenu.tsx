@@ -1,16 +1,13 @@
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import cn from 'classnames'
-import { EventInfo } from 'pages'
+import { EventInfo } from 'models/EventInfo'
 import {
-  Dispatch,
   MouseEventHandler,
-  SetStateAction,
   useContext,
   useEffect,
-  useMemo,
   useRef,
 } from 'react'
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 import { EventCard } from './'
 

@@ -1,18 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaStar, FaRegClock, FaMusic, FaHeadphones, FaEuroSign } from 'react-icons/fa'
 import { BsFillInfoSquareFill } from 'react-icons/bs'
-import { SiGooglemaps } from 'react-icons/si'
+import { FaEuroSign,FaHeadphones } from 'react-icons/fa'
 import { HiCalendar } from 'react-icons/hi2'
+import { SiGooglemaps } from 'react-icons/si'
+
+const MyLoader = () => {
+  return ('')
+}
 
 
 const Featured = () => {
   return (
     <>
-    <div className="mx-auto  h-screen justify-center">
-      <img
+    <div className="mx-auto mb-30  h-screen justify-center">
+      <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./lowlands.jpg'
+        loader={MyLoader}
+        unoptimized={true}
         width={1024}
         height={800}
         alt="lowlands"
@@ -26,7 +32,7 @@ const Featured = () => {
 
 
           <div className="flex flex-row mt-5 hover:text-blue-500">
-          <Link href="https://lowlands.nl/" target="_blank"><div className='flex flex-row'>
+          <Link href="https://goo.gl/maps/8JqMA7k5bLFqDqsA6" target="_blank"><div className='flex flex-row'>
             <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-emerald-500" />
             Biddinghuizen
             </div>
@@ -72,10 +78,12 @@ const Featured = () => {
 
 
 
-    <div className="mx-auto  h-screen justify-center">
-      <img
+    <div className="mx-auto mb-30 h-screen justify-center">
+      <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./aoa.jpg'
+        loader={MyLoader}
+        unoptimized={true}
         width={1024}
         height={800}
         alt="openair"
@@ -89,7 +97,7 @@ const Featured = () => {
 
 
           <div className="flex flex-row mt-5 hover:text-blue-500">
-          <Link href="https://www.openair.com" target="_blank"><div className='flex flex-row'>
+          <Link href="https://goo.gl/maps/8ibcfxgTJnn9xAiZ9" target="_blank"><div className='flex flex-row'>
             <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-purple-500" />
             Gaasperpark, Amsterdam
             </div>
@@ -128,7 +136,7 @@ const Featured = () => {
 
           <div className="flex justify-end">
             <button className="rounded-full bg-purple-500 px-6 py-2 text-white hover:bg-purple-600">
-              <Link href="https://www.openair.com" target="_blank">
+              <Link href="https://www.amsterdamopenair.nl/" target="_blank">
                 Get Tickets
               </Link>
             </button>
@@ -139,10 +147,12 @@ const Featured = () => {
 
 {/* Mystic Garden */}
 
-    <div className="mx-auto mt-10 h-screen justify-center">
-      <img
+    <div className="mx-auto mb-30 mt-10 h-screen justify-center">
+      <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./mysticgarden.jpg'
+        loader={MyLoader}
+        unoptimized={true}
         width={1024}
         height={800}
         alt="openair"
@@ -156,7 +166,7 @@ const Featured = () => {
 
 
           <div className="flex flex-row mt-5 hover:text-blue-500">
-          <Link href="https://mysticgardenfestival.nl/" target="_blank"><div className='flex flex-row'>
+          <Link href="https://goo.gl/maps/W6aT7ZFuxwsSeKPY6" target="_blank"><div className='flex flex-row'>
             <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-green-500" />
             Sloterpark, Amsterdam
             </div>
@@ -175,7 +185,7 @@ const Featured = () => {
 
         <div className="flex max-w-3xl ml-6 flex-row">🌺 𝐌𝐘𝐒𝐓𝐈𝐂 𝐆𝐀𝐑𝐃𝐄𝐍 𝐅𝐄𝐒𝐓𝐈𝐕𝐀𝐋
           Above all expectations, we sold out all tickets for Mystic Garden Festival within the pre-registration phase. 🍄
-          We thank you for your loyalty to us and we can't wait to dance together in the Mystic Gardens on June 17th. 🌿
+          We thank you for your loyalty to us and we can&apos;t wait to dance together in the Mystic Gardens on June 17th. 🌿
           ➢➢➢➢➢➢➢➢➢➢➢
           It begins with the sound of far-off music echoing through the woods, the drums lightly beating, and the violin tune. The heart of the forest calls you towards it.
           Mystic Garden invites those who hear her call to step through her Gates. An enchanted world brimming with magical creatures, breathtaking decor, and world-class DJs awaits you!
@@ -213,9 +223,11 @@ const Featured = () => {
 {/* Loveland */}
 
     <div className="mx-auto mt-10 h-screen justify-center">
-      <img
+      <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./loveland.jpg'
+        loader={MyLoader}
+        unoptimized={true}
         width={1024}
         height={800}
         alt="openair"
@@ -229,7 +241,7 @@ const Featured = () => {
 
 
           <div className="flex flex-row mt-5 hover:text-cyan-500">
-          <Link href="https://www.openair.com" target="_blank"><div className='flex flex-row'>
+          <Link href="https://goo.gl/maps/W6aT7ZFuxwsSeKPY6" target="_blank"><div className='flex flex-row'>
             <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-cyan-500" />
             Sloterpark, Amsterdam
             </div>

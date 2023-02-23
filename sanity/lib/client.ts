@@ -1,7 +1,7 @@
 import { createClient, groq } from 'next-sanity'
 
-import { apiVersion, dataset, projectId, useCdn } from '../env'
 import { EventInfo } from '../../models/EventInfo'
+import { apiVersion, dataset, projectId, useCdn } from '../env'
 
 export const client = createClient({
   apiVersion,

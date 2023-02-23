@@ -1,4 +1,5 @@
-import KingsDay from 'components/Kingsday'
+
+import KingsDay from 'components/KingsDay'
 import React from 'react'
 
 const kingsday = () => {
