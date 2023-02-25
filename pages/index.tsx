@@ -2,6 +2,7 @@ import { ListView } from 'components/ListView'
 import { format, getMonth } from 'date-fns'
 import { PageType } from 'models/PageType'
 import { GetServerSideProps } from 'next'
+import Head from 'next/head'
 import { groq } from 'next-sanity'
 import { useCallback, useEffect, useState } from 'react'
 import { AiOutlineCalendar } from 'react-icons/ai'
@@ -58,7 +59,15 @@ export default function IndexPage({ title, tags }: PropsType) {
 
 
   return (
+<>
     <div>
+    <Head>
+      <title>Amsterdam Party Agenda</title>
+    </Head>
+  </div>
+
+    <div className=''>
+
       {/* <CurrentYear /> */}
       <Months
         selectedMonth={selectedMonth}
@@ -81,7 +90,7 @@ export default function IndexPage({ title, tags }: PropsType) {
         {selectedDay}, Amsterdam Party Agenda
       </div>
 
-      <div className="mb-10">
+      <div className="">
         <div className="mx-auto mt-5 mr-6 justify-end text-right ">
           <button
             className=" focus:dark:zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800"
@@ -114,11 +123,8 @@ export default function IndexPage({ title, tags }: PropsType) {
           false
         )}
       </div>
-
-      {/* <div className="mx-auto">
-        <Featured />
-      </div> */}
     </div>
+    </>
   )
 }
 

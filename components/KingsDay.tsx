@@ -1,11 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsFillInfoSquareFill, BsPinMap } from 'react-icons/bs'
-import { FaEuroSign,FaHeadphones } from 'react-icons/fa'
+import { FaEnvelope, FaTelegramPlane } from 'react-icons/fa'
 import { HiCalendar } from 'react-icons/hi2'
 import { SiGooglemaps } from 'react-icons/si'
 
-import KingsDayImage from '../public/kingsland.jpg'
 
 const MyLoader = () => {
   return ('')
@@ -16,7 +14,35 @@ const KingsDay = () => {
   return (
     <>
 
-    <div className="mx-auto  h-screen justify-center">
+<div className="mx-auto justify-center">
+    <Image
+      className="w-full h-58  md:rounded-xl object-cover  md:h-auto"
+      src='./youradk.png'
+      loader={MyLoader}
+      unoptimized={true}
+      width={540}
+      height={240}
+      alt="ad"
+    />
+
+    <div className="flexflex-col justify-between mb-10 mx-2 md:mx-0 p-2 leading-normal">
+        <h5 className="mb-2 flex flex-row text-md font-bold tracking-tight text-orange-500 md:text-lg">
+          Your Ad/Event Here
+        </h5>
+
+
+      <div className="mt-5 flex flex-row">
+        <FaTelegramPlane className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-orange-500" />{' '}
+        Feel free to contact us! </div>
+        <div className="mt-5 flex flex-row">
+        <FaEnvelope className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-orange-500" />{' '}
+        info@amstonight.com</div>
+        
+     
+  </div>
+  </div>
+
+    <div className="mx-auto justify-center">
       <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./kingsland.jpg'
@@ -30,9 +56,6 @@ const KingsDay = () => {
           <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-orange-500 md:text-3xl">
             Kingsland Festival 2023
           </h5>
-
-        <hr />
-
 
           <div className="flex flex-row mt-5 hover:text-blue-500">
           <Link href="https://goo.gl/maps/xomLaBipndc8doGk6" target="_blank"><div className='flex flex-row'>
@@ -48,52 +71,8 @@ const KingsDay = () => {
           <div className="ml-2 flex flex-col">12:00 - 23:00</div>
         </div>
 
-        <div className="mt-5 flex flex-row text-xl">
-          <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-orange-500" />
-        </div>
-
-        <div className="flex max-w-3xl ml-6 flex-row">
-
-        Kingsland Festival is an annual electronic music festival held in the Netherlands. It takes place in Amsterdam, Rotterdam, Utrecht and Eindhoven. The festival features a wide range of genres including house, techno, hardstyle, drum & bass and more. Kingsland Festival has been running since 2013 and has grown to become one of the biggest festivals in the Netherlands. The festival also hosts a variety of activities such as art installations, food stalls and other attractions.
-          </div>
-
-        <div className="mt-5 flex font-semibold flex-row">
-          <FaHeadphones className="mr-2 h-5 w-5 content-center text-orange-500" />
-          AFROJACK +
-          ANTOON +
-          BILAL WAHIB +
-          BIZZEY +
-          BRENNAN HEART +
-          CHO +
-          CKAY +
-          FRENNA DELUXE +
-          HEF +
-          KEVIN +
-          KRIS KROSS AMSTERDAM +
-          LIJPE +
-          LUCAS & STEVE +
-          POKE +
-          RONNIE FLEX +
-          SIGOURNEY K +
-          WAFF B2B CUARTERO
-          & MANY MORE
-        </div>
-
-        <div className="mt-10 flex flex-row mb-20">
-          <div className="flex flex-grow items-center  justify-start text-xl">
-            <FaEuroSign className='mr-2 h-5 w-5 content-center text-orange-500' /> 60
-          </div>
-
-          <div className="flex justify-end">
-            <button className="rounded-full bg-orange-500 px-6 py-2 text-white hover:bg-orange-600">
-              <Link href="https://shop.paylogic.com/02353a040c624cd2a7caa3f1094b77d5" target="_blank">
-                Get Tickets
-              </Link>
-            </button>
-          </div>
         </div>
       </div>
-    </div>
     </>
 
   )

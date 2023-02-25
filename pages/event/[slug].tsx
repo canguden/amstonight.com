@@ -61,7 +61,7 @@ export default function Slug() {
 
           <hr />
 
-          <div className="mt-5 flex flex-row hover:text-blue-500">
+          <div className="mt-5 flex flex-row text-blue-500 hover:text-blue-400">
             <Link  href={`${eventState?.addressUrl}`} target="_blank">
               <div className="flex flex-row">
                 <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />

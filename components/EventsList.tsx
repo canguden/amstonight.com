@@ -55,7 +55,7 @@ export const EventsList: React.FC<PropsType> = ({
   }).format(eventPrice)
 
   return (
-    <div className="relative mx-2 mt-5 max-w-4xl object-fill ">
+    <div className="relative mx-2 max-w-4xl">
       <Link href={`/event/${slug.current}`}>
         <Image
           src={imageProps?.src}
@@ -71,7 +71,7 @@ export const EventsList: React.FC<PropsType> = ({
           {dayMonth}
         </div>
 
-        <div className=" flex items-center mt-2  gap-2">
+        <div className=" flex items-center mt-2 gap-2">
             <div className="text-md text-gray-600 dark:text-gray-400 font-thin">{selectedDay} | {eventTime}</div>
           </div>
 

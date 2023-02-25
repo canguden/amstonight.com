@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Ad = () => {
+const Advert = () => {
 
 
 
@@ -22,4 +22,4 @@ const Ad = () => {
   )
 }
 
-export default Ad
+export default Advert

@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MouseEventHandler, useContext } from 'react'
@@ -14,6 +15,14 @@ const MyLoader = () => {
 
 const explore = () => {
   return (
+
+    <>
+        <div>
+    <Head>
+      <title>Explore</title>
+    </Head>
+  </div>
+
     <div className="my-2 min-h-screen mb-20">
             <div className='text-2xl ml-5'>Popular Bars</div>
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
@@ -23,6 +32,7 @@ const explore = () => {
             src="./waterkant.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -48,6 +58,7 @@ const explore = () => {
             src="./palladium.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -67,11 +78,12 @@ const explore = () => {
         </div>
 
         <div className="relative bottom-0 mx-2 mt-5 w-80 max-w-4xl  object-fill">
-        <Link href='https://goo.gl/maps/F1Ya9fvk6F8GV8Ld6' target="_blank">
+        <Link href='https://goo.gl/maps/mizurfzKTjdcyPaq5' target="_blank">
           <Image
             src="./lokaal.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -100,6 +112,7 @@ const explore = () => {
             src="./thebutcher.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -125,6 +138,7 @@ const explore = () => {
             src="./salmuera.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -149,6 +163,7 @@ const explore = () => {
             src="./mondi.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -177,6 +192,7 @@ const explore = () => {
             src="./cent.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -202,6 +218,7 @@ const explore = () => {
             src="./scanemb.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -226,6 +243,7 @@ const explore = () => {
             src="./backtoblack.jpg"
             loader={MyLoader}
             unoptimized={true}
+            loading="lazy"
             width={440}
             height={540}
             alt="alt"
@@ -246,7 +264,7 @@ const explore = () => {
       </ScrollMenu>
     </div>
 
-
+    </>
 
   )
 }
