@@ -13,7 +13,7 @@ export const Months: React.FC<PropsType> = ({
   setSelectedMonth,
 }) => {
   return (
-    <div className="mt-10 mb-5 mx-2 flex flex-wrap justify-center border-2 rounded-full border-gray-300 dark:border-gray-800 ">
+    <div className="mt-10 mb-5 mx-2 py-2 flex flex-wrap justify-center border-2 rounded-lg md:rounded-full border-gray-300 dark:border-gray-800 ">
       {MONTHS.map((month) => (
         <div
           key={month}

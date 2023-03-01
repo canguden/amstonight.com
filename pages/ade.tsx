@@ -26,7 +26,7 @@ const Featured = () => {
   <div className="mx-auto justify-center">
       <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
-        src='./yourade.PNG'
+        src='./yourade.png'
         loader={MyLoader}
         unoptimized={true}
         width={1024}

@@ -1,5 +1,6 @@
 import cn from 'classnames'
 import { EventInfo } from 'models/EventInfo'
+import Image from 'next/image'
 import {
   MouseEventHandler,
   useContext,
@@ -7,9 +8,13 @@ import {
   useRef,
 } from 'react'
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight, FaEnvelope, FaTelegramPlane } from 'react-icons/fa'
 
 import { EventCard } from './'
+
+const MyLoader = () => {
+  return ('')
+}
 
 type PropsType = {
   // setSelectedTag: Dispatch<SetStateAction<string[]>>
@@ -41,7 +46,8 @@ export const EventScrollMenu: React.FC<PropsType> = ({
   }, [selectedDay, events])
 
   return (
-    <div className="my-2 min-h-screen">
+    <>
+    <div className="my-2 mb-20">
       <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} apiRef={apiRef}>
         {events.map((el) => (
           <EventCard
@@ -55,6 +61,33 @@ export const EventScrollMenu: React.FC<PropsType> = ({
         ))}
       </ScrollMenu>
     </div>
+
+{/* <div className="mx-auto mt-20 justify-center">
+<Image
+  className="w-full h-58  md:rounded-xl object-cover  md:h-auto"
+  src='./youradhere.png'
+  loader={MyLoader}
+  unoptimized={true}
+  width={540}
+  height={240}
+  alt="ad"
+/>
+
+<div className="flexflex-col mb-24 justify-between mt-3 mx-2 md:mx-0 p-2 leading-normal">
+    <h5 className="mb-2 flex flex-row text-md font-bold tracking-tight text-red-500 md:text-lg">
+      Your Ad/Event Here
+    </h5>
+
+
+    <div className="mt-5 flex flex-row">
+    <FaTelegramPlane className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-red-500" />{' '}
+    Feel free to contact us! </div>
+    <div className="mt-5 flex flex-row">
+    <FaEnvelope className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-red-500" />{' '}
+    info@amstonight.com</div>
+</div>
+</div> */}
+</>
   )
 }
 

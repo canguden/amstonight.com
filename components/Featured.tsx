@@ -17,7 +17,7 @@ const Featured = () => {
 <div className="mx-auto justify-center">
       <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
-        src='./YOURADHERE.PNG'
+        src='./youradhere.png'
         loader={MyLoader}
         unoptimized={true}
         width={1024}
@@ -44,7 +44,7 @@ const Featured = () => {
 
 
 
-    <div className="mx-auto mt-10 justify-center">
+    <div className="mx-auto mt-20 justify-center">
  
     <Link href="/event/dgtl-saturday-08-04">
       <Image
@@ -88,7 +88,7 @@ const Featured = () => {
 
 
 
-    <div className="mx-auto mt-10 mb-28 justify-center">
+    <div className="mx-auto mt-20 justify-center">
  
  <Link href="/event/open-air-03-06">
    <Image
@@ -123,6 +123,51 @@ const Featured = () => {
        <HiCalendar className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-purple-500" />{' '}
        3 - 4 June 2023
        <div className="ml-2 flex flex-col">12:00 - 23:00</div>
+       
+     </div>
+   </div>
+
+
+
+   {/* Chin Chin Festival  */}
+
+
+
+   <div className="mx-auto mt-20 mb-28 justify-center">
+ 
+ <Link href="/event/chin-chin-festival">
+   <Image
+     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+     src='./chinchin.jpg'
+     loader={MyLoader}
+     unoptimized={true}
+     width={1024}
+     height={800}
+     alt="chinchin"
+   />
+
+
+   <div className="flexflex-col  justify-between mx-2  p-2 ">
+       <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-purple-500 md:text-3xl">
+         Chin Chin Festival 2023
+       </h5>
+       </div>
+       </Link>
+   
+
+
+       <div className="flex flex-row mx-2 hover:text-blue-500">
+       <Link href="https://goo.gl/maps/RMZFYi8yuoPRMQNQ7" target="_blank"><div className='flex flex-row'>
+         <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-purple-500" />
+         Tuinen van West, Amsterdam
+         </div>
+         </Link>
+       </div>
+
+     <div className="mt-5 flex flex-row mx-2">
+       <HiCalendar className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-purple-500" />{' '}
+       1 July 2023
+       <div className="ml-2 flex flex-col">13:00 - 23:00</div>
        
      </div>
    </div>

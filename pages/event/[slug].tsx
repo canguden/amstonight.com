@@ -42,7 +42,7 @@ export default function Slug() {
       
       <div className="mb-2 mr-2 flex flex-grow justify-end">
         <button type="button" onClick={() => router.back()}>
-          <AiFillCloseCircle className="h-8 w-8 justify-end " />
+          <AiFillCloseCircle className="h-8 w-8 text-red-500 justify-end " />
         </button>
       </div>
       <div className="mx-auto h-screen justify-center">
@@ -95,8 +95,12 @@ export default function Slug() {
             {eventState?.eventMusic}
           </div>
 
+
+          <div className="mt-5 flex flex-row text-xl">
+            <FaHeadphones className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
+          </div>
+
           <div className="mt-5 flex flex-row">
-            <FaHeadphones className="mr-2 h-5 w-5 content-center text-red-500" />
             {eventState?.Description}
           </div>
 

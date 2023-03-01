@@ -26,9 +26,9 @@ const Footer = () => {
     <FaHome className='h-6 w-6 ml-3'/>
   </Link>
   
-  <Link href="./explore">
+  {/* <Link href="./explore">
     <FaCompass className='h-6 w-6'/>
-  </Link>
+  </Link> */}
 
   <Link href="./festivals">
     <MdFestival className='h-6 w-6'/>

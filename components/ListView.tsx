@@ -51,10 +51,10 @@ export const ListView: React.FC<PropsType> = ({
 
   return (
 <>
-    <div className="mx-auto justify-center">
+    {/* <div className="mx-auto justify-center">
     <Image
       className="w-full h-58  md:rounded-xl object-cover  md:h-auto"
-      src='./YOURADHERE.png'
+      src='./youradhere.png'
       loader={MyLoader}
       unoptimized={true}
       width={540}
@@ -75,7 +75,7 @@ export const ListView: React.FC<PropsType> = ({
         <FaEnvelope className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-red-500" />{' '}
         info@amstonight.com</div>
   </div>
-  </div>
+  </div> */}
 
     <div className="">
           <ScrollMenu apiRef={apiRef}>
@@ -84,7 +84,7 @@ export const ListView: React.FC<PropsType> = ({
       <div
         className="mx-auto mt-5 mb-20 max-w-4xl items-center justify-center"
       >
-        <div className="mx-auto  mb-20 gap-6 ml-2 mr-2 grid grid-cols-1 grid-rows-1 justify-center sm:grid-cols-3 sm:grid-rows-3">
+        <div className="mx-auto  mb-20 gap-6 ml-2 mr-2 grid grid-cols-1 grid-rows-1 justify-center sm:grid-cols-3 ">
           {events.map((el) => (
             <EventsList
               key={el._id}

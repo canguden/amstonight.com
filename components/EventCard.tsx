@@ -92,5 +92,7 @@ export const EventCard: React.FC<PropsType> = ({
           </div>
           </Link>
           </div>
+
+          
   )
 }

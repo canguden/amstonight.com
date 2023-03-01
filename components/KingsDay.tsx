@@ -42,7 +42,8 @@ const KingsDay = () => {
   </div>
   </div>
 
-    <div className="mx-auto justify-center">
+    <div className="mx-auto mb-28 justify-center">
+    <Link href="/event/kingsland-27-04">
       <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./kingsland.jpg'
@@ -56,6 +57,7 @@ const KingsDay = () => {
           <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-orange-500 md:text-3xl">
             Kingsland Festival 2023
           </h5>
+        
 
           <div className="flex flex-row mt-5 hover:text-blue-500">
           <Link href="https://goo.gl/maps/xomLaBipndc8doGk6" target="_blank"><div className='flex flex-row'>
@@ -68,10 +70,12 @@ const KingsDay = () => {
         <div className="mt-5 flex flex-row">
           <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-orange-500" />{' '}
           27 April
-          <div className="ml-2 flex flex-col">12:00 - 23:00</div>
+          <div className="ml-2 flex mb-24 flex-col">12:00 - 23:00</div>
         </div>
+      
 
         </div>
+        </Link>
       </div>
     </>
 
