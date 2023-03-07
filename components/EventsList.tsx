@@ -67,7 +67,7 @@ export const EventsList: React.FC<PropsType> = ({
           className="w-68  h-48 rounded-md object-cover"
         />
 
-        <div className="absolute top-0 rounded-tl-md rounded-br-md bg-black py-1 px-1 font-bold text-white md:py-2">
+        <div className="absolute top-0 rounded-tl-md rounded-br-md bg-red-500 py-1 px-1 font-bold text-white md:py-2">
           {dayMonth}
         </div>
 

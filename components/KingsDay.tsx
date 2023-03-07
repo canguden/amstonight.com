@@ -26,7 +26,7 @@ const KingsDay = () => {
     />
 
     <div className="flexflex-col justify-between mb-10 mx-2 md:mx-0 p-2 leading-normal">
-        <h5 className="mb-2 flex flex-row text-md font-bold tracking-tight text-orange-500 md:text-lg">
+        <h5 className="mb-2 flex flex-row text-md font-bold tracking-tight text-orange-500 md:text-3xl">
           Your Ad/Event Here
         </h5>
 

@@ -26,16 +26,16 @@ const Featured = () => {
       />
 
       <div className="flexflex-col justify-between mb-10 mx-2 md:mx-0 p-2 leading-normal">
-          <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-red-500 md:text-3xl">
+          <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-purple-500 md:text-3xl">
             Your Ad/Event Here
           </h5>
 
 
           <div className="mt-5 flex flex-row">
-        <FaTelegramPlane className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-red-500" />{' '}
+        <FaTelegramPlane className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-purple-500" />{' '}
         Feel free to contact us! </div>
         <div className="mt-5 flex flex-row">
-        <FaEnvelope className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-red-500" />{' '}
+        <FaEnvelope className="align-center mb-1 mr-2 h-6 w-6 content-center items-center text-purple-500" />{' '}
         info@amstonight.com</div>
     </div>
     </div>

@@ -68,7 +68,7 @@ export const EventCard: React.FC<PropsType> = ({
         className="rounded-md object-cover h-48 w-68"
       />
       
-      <div className="absolute mb-0 top-0 rounded-tl-md rounded-br-md text-md bg-black py-2 px-1 md:py-3  font-bold text-white">
+      <div className="absolute mb-0 top-0 rounded-tl-md rounded-br-md text-md bg-red-500 py-2 px-1 md:py-3  font-bold text-white">
         {dayMonth}
       </div>
 

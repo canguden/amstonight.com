@@ -31,7 +31,7 @@ const Footer = () => {
   </Link> */}
 
   <Link href="./festivals">
-    <MdFestival className='h-6 w-6'/>
+    <MdFestival className='h-6 w-6 text-purple-500'/>
   </Link>
 
   <Link href="./kingsday">

@@ -47,7 +47,7 @@ const SideBar = () => {
             href="/festivals"
             className="text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-semibold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900"
           >
-            <MdFestival className="mr-3 h-7 w-7 justify-end" />
+            <MdFestival className="mr-3 h-7 w-7 justify-end text-purple-500" />
             Festivals
           </Link>
 
@@ -87,7 +87,7 @@ const SideBar = () => {
             @amstonight
           </Link>
 
-          <div className="mr-3 mt-2 flex flex-row content-center items-center py-2 px-2 font-semibold text-black dark:text-white">
+          <div className="mr-3 mt-2 flex flex-row content-center items-center py-2 px-2 font-semibold text-black  dark:text-white">
             <span className="mr-3 h-7 w-7">{mounted && <SideThemeChanger />} </span>
             </div>
           </div>
