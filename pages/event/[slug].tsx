@@ -81,7 +81,7 @@ export default function Slug() {
             <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
           </div>
 
-          <div className="ml-6 flex max-w-3xl flex-row">
+          <div className="mt-5 flex max-w-3xl flex-row">
             {eventState?.Content}
           </div>
 
