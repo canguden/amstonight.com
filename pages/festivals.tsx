@@ -8,6 +8,10 @@ const festivals = () => {
         <div>
     <Head>
       <title>Festivals</title>
+      <meta
+  name="description"
+  content="Check out all upcoming festivals in Amsterdam"
+/>
     </Head>
   </div>
     <div>

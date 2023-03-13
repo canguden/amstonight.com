@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useNextSanityImage } from 'next-sanity-image'
 import { useEffect, useState } from 'react'
-import { AiFillCloseCircle } from 'react-icons/ai'
 import { BsFillInfoSquareFill } from 'react-icons/bs'
 import { FaEuroSign, FaHeadphones, FaMusic } from 'react-icons/fa'
 import { GiAges } from 'react-icons/gi'
 import { HiCalendar } from 'react-icons/hi2'
 import { SiGooglemaps } from 'react-icons/si'
+import { TbArrowBackUp } from 'react-icons/tb'
 
 import { EventInfo } from '../../models/EventInfo'
 import { client, getEventsBySlug } from '../../sanity/lib/client'
@@ -42,7 +42,7 @@ export default function Slug() {
       
       <div className="mb-2 mr-2 flex flex-grow justify-end">
         <button type="button" onClick={() => router.back()}>
-          <AiFillCloseCircle className="h-8 w-8 text-red-500 justify-end " />
+          <TbArrowBackUp className="h-8 w-8 hover:scale-90 text-red-500 justify-end " />
         </button>
       </div>
       <div className="mx-auto h-screen justify-center">

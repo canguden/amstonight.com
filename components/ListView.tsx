@@ -82,7 +82,7 @@ export const ListView: React.FC<PropsType> = ({
       
       </ScrollMenu>
       <div
-        className="mx-auto mt-5 mb-20 max-w-4xl items-center justify-center"
+        className="mx-auto mt-5 mb-10 max-w-4xl items-center justify-center"
       >
         <div className="mx-auto  mb-20 gap-6 ml-2 mr-2 grid grid-cols-1 grid-rows-1 justify-center sm:grid-cols-3 ">
           {events.map((el) => (

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaEnvelope, FaTelegramPlane } from 'react-icons/fa'
 import { HiCalendar } from 'react-icons/hi2'
+import { MdFestival } from 'react-icons/md'
 import { SiGooglemaps } from 'react-icons/si'
 
 const MyLoader = () => {
@@ -13,8 +14,11 @@ const Featured = () => {
   return (
     <>
 
+<div className="align-center ml-5 mt-10 flex font-bold flex-row  content-center items-center  text-2xl md:text-3xl">
+      Festivals
+      </div>
 
-<div className="mx-auto justify-center">
+<div className="mx-auto mt-20 justify-center">
       <Image
         className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
         src='./youradhere.png'

@@ -75,7 +75,7 @@ export const EventsList: React.FC<PropsType> = ({
             <div className="text-md text-gray-600 dark:text-gray-400 font-thin">{selectedDay} | {eventTime}</div>
           </div>
 
-        <div className="h-38 w-68 rounded-b-xl ">
+        <div className="h-38 w-68 mb-5 rounded-b-xl ">
           <div className=" flex flex-col justify-start text-xl font-bold">
             {eventName}
             <div className=" mt-1 flex flex-row text-lg font-semibold text-gray-600 dark:text-gray-400">

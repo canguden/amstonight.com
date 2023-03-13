@@ -9,6 +9,10 @@ const kingsday = () => {
     <div>
     <Head>
       <title>Kingsday</title>
+      <meta
+  name="description"
+  content="Check out the events on Kingsday"
+/>
     </Head>
   </div>
     <div>

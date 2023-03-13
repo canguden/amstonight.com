@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect,useState } from 'react'
-import { AiFillHome, AiFillInstagram } from 'react-icons/ai'
-import { FaCompass, FaCrown } from 'react-icons/fa'
+import { AiFillFacebook, AiFillHome, AiFillInstagram } from 'react-icons/ai'
+import { FaCompass, FaCrown, FaFacebook } from 'react-icons/fa'
 import { MdFestival } from 'react-icons/md'
 
 import SideThemeChanger from './SideThemeChanger'
@@ -47,7 +47,7 @@ const SideBar = () => {
             href="/festivals"
             className="text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-semibold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900"
           >
-            <MdFestival className="mr-3 h-7 w-7 justify-end text-purple-500" />
+            <MdFestival className="mr-3 h-7 w-7 justify-end" />
             Festivals
           </Link>
 
@@ -84,6 +84,15 @@ const SideBar = () => {
             className="text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-semibold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900"
           >
             <AiFillInstagram className="mr-3 h-7 w-7 justify-end" />
+            @amstonight
+          </Link>
+
+          <Link
+            href="https://www.facebook.com/apaamstonight"
+            target="_blank"
+            className="text-md mr-3 mt-1 flex flex-row content-center items-center rounded-full py-2 px-2 font-semibold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900"
+          >
+            <FaFacebook className="mr-3 h-7 w-7 rounded-lg justify-end" />
             @amstonight
           </Link>
 

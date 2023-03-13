@@ -17,7 +17,18 @@ const Featured = () => {
     <>
 
     {/* Mystic Garden ADE */}
-
+    <div className="align-center ml-5 mt-10 flex font-bold flex-row  content-center items-center  text-2xl md:text-3xl">
+    <Image
+        className='mr-3  h-12 w-12 flex flex-row items-center  justify-end'
+        src='./logo-ade.png'
+        loader={MyLoader}
+        unoptimized={true}
+        width={30}
+        height={30}
+        alt="ade"
+      />
+      Amsterdam Dance Event
+      </div>
       
     <div className="mx-auto mt-20 justify-center">
  

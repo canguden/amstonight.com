@@ -3,6 +3,7 @@ import { format, getMonth } from 'date-fns'
 import { PageType } from 'models/PageType'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import { groq } from 'next-sanity'
 import { useCallback, useEffect, useState } from 'react'
 import { AiOutlineCalendar } from 'react-icons/ai'
@@ -14,6 +15,7 @@ import { MONTHS } from '../lib/constants'
 import {EventInfo} from "../models/EventInfo";
 import { TagType } from '../models/TagType'
 import { client } from '../sanity/lib/client'
+import Link from 'next/link'
 
 type PropsType = {
   title: string
@@ -57,14 +59,36 @@ export default function IndexPage({ title, tags }: PropsType) {
 
   const [show, setShow] = useState(true)
 
+  const MyLoader = () => {
+    return ('')
+  }
+
 
   return (
 <>
     <div>
     <Head>
       <title>Amsterdam Party Agenda</title>
+      <meta
+  name="description"
+  content="Check out all upcoming events in Amsterdam"
+/>
     </Head>
-  </div>
+    </div>
+
+    <Link href="https://instagram.com/amstonight" target='_blank'>
+   <Image
+     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+     src='./amstonightbanner.jpg'
+     loader={MyLoader}
+     unoptimized={true}
+     width={1024}
+     height={800}
+     alt="banner"
+   />
+       </Link>
+
+
 
     <div className=''>
 
@@ -85,12 +109,16 @@ export default function IndexPage({ title, tags }: PropsType) {
           selectedTags={selectedTags}
         />
       </div> */}
-      <div className="align-center ml-5 mt-20 flex flex-row  content-center items-center  text-xl md:text-2xl">
+      <div className="align-center ml-5 mt-10 flex flex-row font-bold  content-center items-center  text-2xl md:text-3xl">
+Amsterdam Party Agenda
+      </div>
+      
+      <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
         <AiOutlineCalendar className="mr-3 text-red-500" />
-        {selectedDay}, Amsterdam Party Agenda
+        {selectedDay}
       </div>
 
-      <div className="">
+      <div className="mb-10">
         <div className="mx-auto mt-5 mr-6 justify-end text-right ">
           <button
             className=" focus:dark:zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800"
@@ -123,6 +151,34 @@ export default function IndexPage({ title, tags }: PropsType) {
           false
         )}
       </div>
+
+<div className='mb-10'>
+      <Link href="https://thuisbezorgd.nl" target='_blank'>
+   <Image
+     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+     src='./takeway.png'
+     loader={MyLoader}
+     unoptimized={true}
+     width={1024}
+     height={800}
+     alt="banner"
+   />
+       </Link>
+       </div>
+
+       <div className='mb-20'>
+      <Link href="https://bolt.eu" target='_blank'>
+   <Image
+     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
+     src='./bolt.png'
+     loader={MyLoader}
+     unoptimized={true}
+     width={1024}
+     height={800}
+     alt="banner"
+   />
+       </Link>
+       </div>
     </div>
     </>
   )
