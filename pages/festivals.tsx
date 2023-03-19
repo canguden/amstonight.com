@@ -5,18 +5,18 @@ import React from 'react'
 const festivals = () => {
   return (
     <>
-        <div>
-    <Head>
-      <title>Festivals</title>
-      <meta
-  name="description"
-  content="Check out all upcoming festivals in Amsterdam"
-/>
-    </Head>
-  </div>
-    <div>
-      <Featured />
-    </div>
+      <div>
+        <Head>
+          <title> Festivals - Netherlands Festival Guide </title>
+          <meta
+            name="description"
+            content="Check out all upcoming festivals in Amsterdam"
+          />
+        </Head>
+      </div>
+      <div>
+        <Featured />
+      </div>
     </>
   )
 }

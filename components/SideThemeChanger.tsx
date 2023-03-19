@@ -17,10 +17,10 @@ const SideThemeChanger = () => {
       {resolvedTheme === "dark" ? (
 
 
-        <><BsFillSunFill className="h-6 w-6 mr-3" /><>Light</></>
+        <><BsFillSunFill className="h-6 w-6 mr-3" /><>Day</></>
 
       ) : (
-      <>  <FaMoon className="h-6 w-6 mr-3" />Dark</>
+      <>  <FaMoon className="h-6 w-6 mr-3" />Club</>
       )}
 
     </button>

@@ -4,6 +4,7 @@ import { PageType } from 'models/PageType'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { groq } from 'next-sanity'
 import { useCallback, useEffect, useState } from 'react'
 import { AiOutlineCalendar } from 'react-icons/ai'
@@ -12,10 +13,9 @@ import { FaArrowsAltH } from 'react-icons/fa'
 
 import { DaysScrollMenuItems, EventScrollMenu, Months } from '../components'
 import { MONTHS } from '../lib/constants'
-import {EventInfo} from "../models/EventInfo";
+import { EventInfo } from '../models/EventInfo'
 import { TagType } from '../models/TagType'
 import { client } from '../sanity/lib/client'
-import Link from 'next/link'
 
 type PropsType = {
   title: string
@@ -60,126 +60,110 @@ export default function IndexPage({ title, tags }: PropsType) {
   const [show, setShow] = useState(true)
 
   const MyLoader = () => {
-    return ('')
+    return ''
   }
 
-
   return (
-<>
-    <div>
-    <Head>
-      <title>Amsterdam Party Agenda</title>
-      <meta
-  name="description"
-  content="Check out all upcoming events in Amsterdam"
-/>
-    </Head>
-    </div>
+    <>
+      <div>
+        <Head>
+          <title>Amsterdam Party Agenda - DJ and Party Guide</title>
+          <meta
+            name="description"
+            content="Check out all upcoming events in Amsterdam - The best dj and party guide - Awakenings - Open Air - Bars - Clubs"
+          />
+        </Head>
+      </div>
 
-    <Link href="https://instagram.com/amstonight" target='_blank'>
-   <Image
-     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
-     src='./amstonightbanner.jpg'
-     loader={MyLoader}
-     unoptimized={true}
-     width={1024}
-     height={800}
-     alt="banner"
-   />
-       </Link>
+      <div className="mb-10 mt-10">
+        <Link href="https://thuisbezorgd.nl" target="_blank">
+          <Image
+            className="h-76 w-full object-cover md:h-auto  md:rounded-xl"
+            src="./takeway.png"
+            loader={MyLoader}
+            unoptimized={true}
+            width={1024}
+            height={800}
+            alt="banner"
+          />
+        </Link>
+      </div>
 
-
-
-    <div className=''>
-
-      {/* <CurrentYear /> */}
-      <Months
-        selectedMonth={selectedMonth}
-        setSelectedMonth={setSelectedMonth}
-      />
-      <DaysScrollMenuItems
-        selectedMonth={selectedMonth}
-        selectedDay={selectedDay}
-        setSelectedDay={setSelectedDay}
-      />
-      {/* <div className="my-10 mx-4 mt-10 mb-10 flex items-center justify-center mx-auto max-4xl md:mx-6">
+      <div className="">
+        {/* <CurrentYear /> */}
+        <Months
+          selectedMonth={selectedMonth}
+          setSelectedMonth={setSelectedMonth}
+        />
+        <DaysScrollMenuItems
+          selectedMonth={selectedMonth}
+          selectedDay={selectedDay}
+          setSelectedDay={setSelectedDay}
+        />
+        {/* <div className="my-10 mx-4 mt-10 mb-10 flex items-center justify-center mx-auto max-4xl md:mx-6">
         <Tags
           tags={tags}
           setSelectedTag={setSelectedTag}
           selectedTags={selectedTags}
         />
       </div> */}
-      <div className="align-center ml-5 mt-10 flex flex-row font-bold  content-center items-center  text-2xl md:text-3xl">
-Amsterdam Party Agenda
-      </div>
-      
-      <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
-        <AiOutlineCalendar className="mr-3 text-red-500" />
-        {selectedDay}
-      </div>
-
-      <div className="mb-10">
-        <div className="mx-auto mt-5 mr-6 justify-end text-right ">
-          <button
-            className=" focus:dark:zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800"
-            onClick={() => setShow(true)}
-          >
-            <BsGrid3X3 className="h-5 w-5" />
-          </button>
-          <button
-            className=" focus:dark-zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800 active:dark:bg-zinc-800"
-            onClick={() => setShow(false)}
-          >
-            <FaArrowsAltH className="h-5 w-5" />
-          </button>
+        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
+          Amsterdam Party Agenda
         </div>
-        {show ? (
-          <ListView
-            // setSelectedTag={setSelectedTag}
-            // selectedTags={selectedTags}
-            selectedDay={selectedDay}
-            events={eventsState}
-          />
-        ) : true ? (
-          <EventScrollMenu
-            // setSelectedTag={setSelectedTag}
-            // selectedTags={selectedTags}
-            selectedDay={selectedDay}
-            events={eventsState}
-          />
-        ) : (
-          false
-        )}
+
+        <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
+          <AiOutlineCalendar className="mr-3 text-red-500" />
+          {selectedDay}
+        </div>
+
+        <div className="mb-10">
+          <div className="mx-auto mt-5 mr-6 justify-end text-right ">
+            <button
+              className=" focus:dark:zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800"
+              onClick={() => setShow(true)}
+            >
+              <BsGrid3X3 className="h-5 w-5" />
+            </button>
+            <button
+              className=" focus:dark-zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800 active:dark:bg-zinc-800"
+              onClick={() => setShow(false)}
+            >
+              <FaArrowsAltH className="h-5 w-5" />
+            </button>
+          </div>
+          {show ? (
+            <ListView
+              // setSelectedTag={setSelectedTag}
+              // selectedTags={selectedTags}
+              selectedDay={selectedDay}
+              events={eventsState}
+            />
+          ) : true ? (
+            <EventScrollMenu
+              // setSelectedTag={setSelectedTag}
+              // selectedTags={selectedTags}
+              selectedDay={selectedDay}
+              events={eventsState}
+            />
+          ) : (
+            false
+          )}
+        </div>
+
+        <div className="mb-20">
+          <Link href="https://bolt.eu" target="_blank">
+            <Image
+              className="h-76 w-full object-cover md:h-auto  md:rounded-xl"
+              src="./bolt.png"
+              loader={MyLoader}
+              unoptimized={true}
+              width={1024}
+              height={800}
+              alt="banner"
+            />
+          </Link>
+        </div>
       </div>
-
-<div className='mb-10'>
-      <Link href="https://thuisbezorgd.nl" target='_blank'>
-   <Image
-     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
-     src='./takeway.png'
-     loader={MyLoader}
-     unoptimized={true}
-     width={1024}
-     height={800}
-     alt="banner"
-   />
-       </Link>
-       </div>
-
-       <div className='mb-20'>
-      <Link href="https://bolt.eu" target='_blank'>
-   <Image
-     className="h-76 w-full md:rounded-xl object-cover  md:h-auto"
-     src='./bolt.png'
-     loader={MyLoader}
-     unoptimized={true}
-     width={1024}
-     height={800}
-     alt="banner"
-   />
-       </Link>
-       </div>
-    </div>
     </>
   )
 }

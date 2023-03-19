@@ -39,10 +39,9 @@ export default function Slug() {
 
   return (
     <>
-      
       <div className="mb-2 mr-2 flex flex-grow justify-end">
         <button type="button" onClick={() => router.back()}>
-          <TbArrowBackUp className="h-8 w-8 hover:scale-90 text-red-500 justify-end " />
+          <TbArrowBackUp className="h-8 w-8 justify-end text-red-500 hover:scale-90 " />
         </button>
       </div>
       <div className="mx-auto h-screen justify-center">
@@ -52,7 +51,7 @@ export default function Slug() {
           loader={image?.loader}
           width={1024}
           height={800}
-          alt=""
+          alt="Event Image"
         />
         <div className="mx-2 flex flex-col justify-between p-2 leading-normal md:mx-0">
           <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-3xl">
@@ -62,7 +61,7 @@ export default function Slug() {
           <hr />
 
           <div className="mt-5 flex flex-row text-blue-500 hover:text-blue-400">
-            <Link  href={`${eventState?.addressUrl}`} target="_blank">
+            <Link href={`${eventState?.addressUrl}`} target="_blank">
               <div className="flex flex-row">
                 <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
                 {eventState?.eventAddress}
@@ -75,7 +74,6 @@ export default function Slug() {
             {`${eventState?.eventDate}`} |
             <div className="ml-2 flex flex-col">{eventState?.eventTime}</div>
           </div>
-
 
           <div className="mt-5 flex flex-row text-xl">
             <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
@@ -95,14 +93,11 @@ export default function Slug() {
             {eventState?.eventMusic}
           </div>
 
-
           <div className="mt-5 flex flex-row text-xl">
             <FaHeadphones className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
           </div>
 
-          <div className="mt-5 flex flex-row">
-            {eventState?.Description}
-          </div>
+          <div className="mt-5 flex flex-row">{eventState?.Description}</div>
 
           <div className="mt-10 mb-20 flex flex-row">
             <div className="flex flex-grow items-center  justify-start text-xl">

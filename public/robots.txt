@@ -1,0 +1,4 @@
+User-agent: *
+allow: /
+
+Sitemap: https/amstonight.com/api/sitemap

@@ -16,6 +16,10 @@ const sans = Roboto({
   weight: ['400', '700', '900'],
 })
 
+const MyLoader = () => {
+  return ('')
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
