@@ -39,7 +39,7 @@ export default function Slug() {
 
   return (
     <>
-      <div className="mb-2 mr-2 flex flex-grow justify-end">
+      <div className="mb-2 mr-5 flex flex-grow justify-end">
         <button type="button" onClick={() => router.back()}>
           <TfiClose className="h-6 w-6 justify-end hover:scale-90 " />
         </button>
@@ -100,13 +100,13 @@ export default function Slug() {
 
           <div className="mt-5 flex flex-row">{eventState?.Description}</div>
 
-          <div className="mt-10 mb-20 flex flex-row">
+          <div className="mt-10 mb-10 flex flex-row">
             <div className="flex flex-grow items-center  justify-start text-xl">
               <FaEuroSign className="mr-2 h-5 w-5 content-center" />{' '}
               {eventState?.eventPrice}
             </div>
 
-            <div className="flex justify-end">
+            <div className=" flex justify-end">
               <button className="rounded-full bg-red-500 px-6 py-2 text-white hover:bg-red-600">
                 <Link href={`${eventState?.eventUrl}`} target="_blank">
                   Get Tickets

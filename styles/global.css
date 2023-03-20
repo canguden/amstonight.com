@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand&family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand:wght@400;700&family=Tilt+Warp&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,8 +15,6 @@
 
 * {
   font-family: 'QuickSand', Open sans, sans-serif;
-  font-weight: lighter;
-  scroll-behavior: smooth;
 }
 
 /* chrome and chromium based */

@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee'
 
 const Announcement = () => {
   return (
-    <div className="align-center mt-10 items-center justify-center py-1 text-lg font-extrabold">
+    <div className="align-center mt-10 items-center justify-center py-1 text-lg font-bold">
       <Marquee speed={60} gradient={false} pauseOnHover>
         <div className="mr-2 flex text-center">
           <span className="mr-2">Follow us on </span>

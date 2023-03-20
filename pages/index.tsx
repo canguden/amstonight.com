@@ -93,7 +93,7 @@ export default function IndexPage({ title, tags }: PropsType) {
       <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
         The Best Clubs, Bars, Events and Parties in Amsterdam!
       </div>
-      <p className="align-center ml-5 mt-5 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
+      <p className="align-center ml-5 mt-5 mr-2 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
         Explore Amsterdam&apos;s Exciting Nightlife with the Ultimate Party
         Calendar! Discover the best parties and events in Amsterdam with our
         comprehensive party calendar. From rooftop bars to festivals and clubs,
@@ -123,6 +123,10 @@ export default function IndexPage({ title, tags }: PropsType) {
         <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
           <AiOutlineCalendar className="mr-3 text-red-500" />
           {selectedDay}
+        </div>
+
+        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
+          Upcoming Events
         </div>
 
         <div className="mb-10">
@@ -157,20 +161,6 @@ export default function IndexPage({ title, tags }: PropsType) {
           ) : (
             false
           )}
-        </div>
-
-        <div className="mb-20">
-          <Link href="https://bolt.eu" target="_blank">
-            <Image
-              className="h-76 w-full object-cover md:h-auto  md:rounded-xl"
-              src="./bolt.png"
-              loader={MyLoader}
-              unoptimized={true}
-              width={1024}
-              height={800}
-              alt="banner"
-            />
-          </Link>
         </div>
       </div>
     </>

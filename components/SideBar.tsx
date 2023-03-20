@@ -34,8 +34,8 @@ const SideBar = () => {
               href="/"
               className={`${
                 router.pathname === '/'
-                  ? 'text-md  mr-3 mt-10 flex flex-row content-center items-center rounded-full py-2 px-2 font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
-                  : 'text-md  mr-3 mt-10 flex flex-row content-center items-center rounded-full py-2 px-2 font-thin text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                  ? 'mr-3  mt-10 flex flex-row content-center items-center rounded-full py-2 px-2 text-lg font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                  : 'text-md  font-regular mr-3 mt-10 flex flex-row content-center items-center rounded-full py-2 px-2 text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
               } `}
             >
               <AiFillHome className="mr-3 h-7 w-7 justify-end" />
@@ -54,8 +54,8 @@ const SideBar = () => {
             href="/festivals"
             className={`${
               router.pathname === '/festivals'
-                ? 'text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
-                : 'text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-thin text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                ? 'mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-lg font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                : 'text-md font-regular mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
             } `}
           >
             <MdFestival className="mr-3 h-7 w-7 justify-end" />
@@ -66,8 +66,8 @@ const SideBar = () => {
             href="/kingsday"
             className={`${
               router.pathname === '/kingsday'
-                ? 'text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
-                : 'text-md mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 font-thin text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                ? 'mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-lg font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                : 'text-md font-regular mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
             } `}
           >
             <FaCrown className="mr-3 h-7 w-7 justify-end text-orange-500" />
@@ -78,8 +78,8 @@ const SideBar = () => {
             href="./ade"
             className={`${
               router.pathname === '/ade'
-                ? 'text-md mr-3 mt-3 flex flex-row content-center items-center rounded-full py-2 px-2 font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
-                : 'text-md mr-3 mt-3 flex flex-row content-center items-center rounded-full py-2 px-2 font-thin text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                ? 'mr-3 mt-3 flex flex-row content-center items-center rounded-full py-2 px-2 text-lg font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
+                : 'text-md font-regular mr-3 mt-3 flex flex-row content-center items-center rounded-full py-2 px-2 text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
             } `}
           >
             <Image
