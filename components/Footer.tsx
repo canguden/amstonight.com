@@ -1,60 +1,80 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { AiFillHome } from 'react-icons/ai'
+import { useRouter } from 'next/router'
+import { AiFillHome, AiTwotoneCrown } from 'react-icons/ai'
 import {
+  FaCalendarAlt,
   FaCompass,
   FaCrown,
   FaHome,
-}
-from 'react-icons/fa'
+  FaMicroblog,
+} from 'react-icons/fa'
 import { MdFestival } from 'react-icons/md'
 
-
 const MyLoader = () => {
-  return ('')
+  return ''
 }
 
 const Footer = () => {
-
-
+  const router = useRouter()
   return (
-    <div className='2xl:hidden py-5 z-50 bottom-0 mt-10 border-t border-gray-300 dark:border-gray-800
-      bg-white dark:bg-black '>
+    <div
+      className="bottom-0 z-50 mt-10 border-t border-gray-300 bg-white py-6 dark:border-gray-800
+      dark:bg-black 2xl:hidden "
+    >
+      <div className="mx-auto flex max-w-4xl flex-row  items-center justify-between px-4 text-center  dark:text-white ">
+        <Link
+          href="/"
+          className={`${
+            router.pathname === '/' ? 'ml-3 text-red-500' : 'ml-3'
+          } `}
+        >
+          <AiFillHome className=" h-8 w-8" />
+        </Link>
 
-
-<div className="flex flex-row justify-between md:justify-evenly text-center max-w-4xl   items-center  mx-auto ">
-  <Link href="/">
-    <AiFillHome className='h-6 w-6 ml-3'/>
-  </Link>
-  
-  {/* <Link href="./explore">
+        {/* <Link href="./explore">
     <FaCompass className='h-6 w-6'/>
   </Link> */}
-
-  <Link href="./festivals">
-    <MdFestival className='h-6 w-6'/>
-  </Link>
-
-  <Link href="./kingsday">
-    <FaCrown className='h-6 w-6 text-orange-500'/>
-  </Link>
-
-  <Link href="./ade">
-  <Image
-        className='mr-3'
-        src='./logo-ade.png'
-        loader={MyLoader}
-        unoptimized={true}
-        width={30}
-        height={30}
-        alt="ade"
-      />
+        <Link
+          href="./festivals"
+          className={`${
+            router.pathname === '/festivals' ? ' text-red-500' : ' '
+          } `}
+        >
+          <MdFestival className="h-8 w-8" />
         </Link>
-  </div>
 
+        {/* <Link
+          href="./news"
+          className={`${
+            router.pathname === '/kingsday' ? ' text-red-500' : 'ml-3'
+          } `}
+        >
+          <FaMicroblog className="h-5 w-5" />
+        </Link> */}
 
+        <Link
+          href="./kingsday"
+          className={`${
+            router.pathname === '/kingsday' ? ' text-orange-500' : 'ml-3'
+          } `}
+        >
+          <AiTwotoneCrown className="h-8 w-8" />
+        </Link>
 
-</div>
+        <Link href="./ade">
+          <Image
+            className=""
+            src="./logo-ade.png"
+            loader={MyLoader}
+            unoptimized={true}
+            width={35}
+            height={35}
+            alt="ade"
+          />
+        </Link>
+      </div>
+    </div>
   )
 }
 

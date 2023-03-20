@@ -1,5 +1,6 @@
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { Slug } from '@sanity/types'
+
 import { TagType } from './TagType'
 
 export type EventInfo = {
@@ -11,7 +12,7 @@ export type EventInfo = {
   eventTime: string
   Content: string
   Description: string
-  Age: string,
+  Age: string
   eventClub: string
   eventMusic: string
   eventAddress: string

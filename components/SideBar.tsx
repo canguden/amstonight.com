@@ -19,15 +19,13 @@ const SideBar = () => {
   const router = useRouter()
 
   return (
-    <div className="z-50 hidden xl:fixed xl:top-0  xl:h-full xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-gray-800 2xl:flex ">
-      <div className="w-96 bg-gray-100 dark:bg-black ">
+    <div className="z-50 hidden xl:fixed xl:top-0  xl:h-full xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-zinc-900 2xl:flex ">
+      <div className="w-96 bg-white dark:bg-black ">
         <Link href="/">
           <h1 className="fex-row ml-8 mt-10 flex px-2 font-bold   md:font-bold">
-            <span className="text-extrabold text-3xl">Amsterdam</span>
-            <span className="mt-2 text-lg">Tonight</span>{' '}
-            <div className="mt-2 ml-1 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 py-1 px-1 text-xs text-white">
-              com
-            </div>
+            <span className="text-2xl font-extrabold">
+              Amsterdam Party Agenda
+            </span>
           </h1>
         </Link>
         <div className="ml-8 flex flex-col ">
@@ -73,7 +71,7 @@ const SideBar = () => {
             } `}
           >
             <FaCrown className="mr-3 h-7 w-7 justify-end text-orange-500" />
-            Kings Day
+            King&apos;s Day
           </Link>
 
           <Link

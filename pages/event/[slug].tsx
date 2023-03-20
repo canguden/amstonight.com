@@ -41,7 +41,7 @@ export default function Slug() {
     <>
       <div className="mb-2 mr-2 flex flex-grow justify-end">
         <button type="button" onClick={() => router.back()}>
-          <TbArrowBackUp className="h-8 w-8 justify-end text-red-500 hover:scale-90 " />
+          <TbArrowBackUp className="h-8 w-8 justify-end hover:scale-90 " />
         </button>
       </div>
       <div className="mx-auto h-screen justify-center">
@@ -53,6 +53,10 @@ export default function Slug() {
           height={800}
           alt="Event Image"
         />
+        <div className="text-md absolute top-20 rounded-tl-md rounded-br-md bg-red-500 py-2 px-1 font-bold  text-white md:py-3">
+          {`${eventState?.eventDate}`}
+        </div>
+
         <div className="mx-2 flex flex-col justify-between p-2 leading-normal md:mx-0">
           <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-3xl">
             {eventState?.eventName} - {eventState?.eventClub}
@@ -60,23 +64,23 @@ export default function Slug() {
 
           <hr />
 
-          <div className="mt-5 flex flex-row text-blue-500 hover:text-blue-400">
+          <div className="mt-5 flex flex-row text-blue-600 hover:text-blue-700">
             <Link href={`${eventState?.addressUrl}`} target="_blank">
               <div className="flex flex-row">
-                <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
+                <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-black dark:text-white " />
                 {eventState?.eventAddress}
               </div>
             </Link>
           </div>
 
           <div className="mt-5 flex flex-row">
-            <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-red-500" />{' '}
+            <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center" />{' '}
             {`${eventState?.eventDate}`} |
             <div className="ml-2 flex flex-col">{eventState?.eventTime}</div>
           </div>
 
           <div className="mt-5 flex flex-row text-xl">
-            <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
+            <BsFillInfoSquareFill className="mt-1 mr-2 h-5 w-5 content-center" />
           </div>
 
           <div className="mt-5 flex max-w-3xl flex-row">
@@ -84,24 +88,24 @@ export default function Slug() {
           </div>
 
           <div className="mt-5 flex flex-row">
-            <GiAges className="mr-2 h-5 w-5 content-center text-red-500" />
+            <GiAges className="mr-2 h-5 w-5 content-center" />
             {eventState?.Age}
           </div>
 
           <div className="mt-5 flex flex-row">
-            <FaMusic className="mr-2 h-5 w-5 content-center text-red-500" />
+            <FaMusic className="mr-2 h-5 w-5 content-center" />
             {eventState?.eventMusic}
           </div>
 
           <div className="mt-5 flex flex-row text-xl">
-            <FaHeadphones className="mt-1 mr-2 h-5 w-5 content-center text-red-500" />
+            <FaHeadphones className="mt-1 mr-2 h-5 w-5 content-center" />
           </div>
 
           <div className="mt-5 flex flex-row">{eventState?.Description}</div>
 
           <div className="mt-10 mb-20 flex flex-row">
             <div className="flex flex-grow items-center  justify-start text-xl">
-              <FaEuroSign className="mr-2 h-5 w-5 content-center text-red-500" />{' '}
+              <FaEuroSign className="mr-2 h-5 w-5 content-center" />{' '}
               {eventState?.eventPrice}
             </div>
 

@@ -110,6 +110,11 @@ export default function IndexPage({ title, tags }: PropsType) {
         <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
           Amsterdam Party Agenda
         </div>
+        <p className="align-center ml-5 mt-5 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
+          Check out the parties and events that are on tonight or any other day!
+          See which DJ is playing and don&apos;t miss out on the best nightlife
+          in Amsterdam.
+        </p>
 
         <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
           <AiOutlineCalendar className="mr-3 text-red-500" />

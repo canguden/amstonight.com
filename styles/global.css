@@ -1,8 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand&family=Tilt+Warp&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 @layer base {
   body {
@@ -10,12 +9,15 @@
     margin: 0;
     padding: 0;
 
-
-@apply  bg-gray-100 text-gray-900 dark:bg-black/40 dark:text-gray-300 ;
+    @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300;
   }
-
 }
 
+* {
+  font-family: 'QuickSand', Open sans, sans-serif;
+  font-weight: lighter;
+  scroll-behavior: smooth;
+}
 
 /* chrome and chromium based */
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
