@@ -12,6 +12,7 @@ import { BsGrid3X3 } from 'react-icons/bs'
 import { FaArrowsAltH } from 'react-icons/fa'
 
 import { DaysScrollMenuItems, EventScrollMenu, Months } from '../components'
+import Announcement from '../components/Announcement'
 import { MONTHS } from '../lib/constants'
 import { EventInfo } from '../models/EventInfo'
 import { TagType } from '../models/TagType'
@@ -73,9 +74,10 @@ export default function IndexPage({ title, tags }: PropsType) {
             content="Check out all upcoming events in Amsterdam - The best dj and party guide - Awakenings - Open Air - Bars - Clubs"
           />
         </Head>
-      </div>
 
-      <div className="mb-10 mt-10">
+        <Announcement />
+      </div>
+      {/* <div className="mb-10 mt-10">
         <Link href="https://thuisbezorgd.nl" target="_blank">
           <Image
             className="h-76 w-full object-cover md:h-auto  md:rounded-xl"
@@ -86,8 +88,18 @@ export default function IndexPage({ title, tags }: PropsType) {
             height={800}
             alt="banner"
           />
-        </Link>
+          </Link>
+        </div> */}
+      <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
+        The Best Clubs, Bars, Events and Parties in Amsterdam!
       </div>
+      <p className="align-center ml-5 mt-5 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
+        Explore Amsterdam&apos;s Exciting Nightlife with the Ultimate Party
+        Calendar! Discover the best parties and events in Amsterdam with our
+        comprehensive party calendar. From rooftop bars to festivals and clubs,
+        we have all the information you need to make your night out in Amsterdam
+        unforgettable!
+      </p>
 
       <div className="">
         {/* <CurrentYear /> */}
@@ -107,14 +119,6 @@ export default function IndexPage({ title, tags }: PropsType) {
           selectedTags={selectedTags}
         />
       </div> */}
-        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
-          Amsterdam Party Agenda
-        </div>
-        <p className="align-center ml-5 mt-5 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
-          Check out the parties and events that are on tonight or any other day!
-          See which DJ is playing and don&apos;t miss out on the best nightlife
-          in Amsterdam.
-        </p>
 
         <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
           <AiOutlineCalendar className="mr-3 text-red-500" />

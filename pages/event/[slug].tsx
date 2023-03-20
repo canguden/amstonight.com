@@ -8,7 +8,7 @@ import { FaEuroSign, FaHeadphones, FaMusic } from 'react-icons/fa'
 import { GiAges } from 'react-icons/gi'
 import { HiCalendar } from 'react-icons/hi2'
 import { SiGooglemaps } from 'react-icons/si'
-import { TbArrowBackUp } from 'react-icons/tb'
+import { TfiClose } from 'react-icons/tfi'
 
 import { EventInfo } from '../../models/EventInfo'
 import { client, getEventsBySlug } from '../../sanity/lib/client'
@@ -41,7 +41,7 @@ export default function Slug() {
     <>
       <div className="mb-2 mr-2 flex flex-grow justify-end">
         <button type="button" onClick={() => router.back()}>
-          <TbArrowBackUp className="h-8 w-8 justify-end hover:scale-90 " />
+          <TfiClose className="h-6 w-6 justify-end hover:scale-90 " />
         </button>
       </div>
       <div className="mx-auto h-screen justify-center">
@@ -53,9 +53,6 @@ export default function Slug() {
           height={800}
           alt="Event Image"
         />
-        <div className="text-md absolute top-20 rounded-tl-md rounded-br-md bg-red-500 py-2 px-1 font-bold  text-white md:py-3">
-          {`${eventState?.eventDate}`}
-        </div>
 
         <div className="mx-2 flex flex-col justify-between p-2 leading-normal md:mx-0">
           <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-3xl">

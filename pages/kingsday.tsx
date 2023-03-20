@@ -19,10 +19,18 @@ const kingsday = () => {
           <meta name="description" content="Check out the events on Kingsday" />
         </Head>
       </div>
-      <div className="align-center mb-20  mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
-        <FaCrown className="mr-3 ml-2 h-10 w-10 justify-end text-orange-500" />
+      <div className="align-center  mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
+        <FaCrown className="mr-3  ml-2 h-10 w-10 justify-end text-orange-500" />
         King&apos;s Day - 27th of April
       </div>
+      <p className="align-center ml-5 mt-5 mb-10 mr-1 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
+        Celebrate Kingsday in the Netherlands: Festivals and Events for All
+        Ages! Experience the vibrant culture of the Netherlands this Kingsday
+        with a variety of festivals and events for all ages. From traditional
+        Dutch music and dance to carnival rides and food stalls, there&apos;s
+        something for everyone to enjoy. Celebrate the Dutch monarchy with a day
+        of fun, festivities, and memories that will last a lifetime!
+      </p>
 
       <div className="mx-auto mb-28 justify-center">
         <Link href="/event/kingsland-27-04">

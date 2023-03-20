@@ -1,6 +1,7 @@
 import 'styles/global.css'
 
 import { Analytics } from '@vercel/analytics/react'
+import Announcement from 'components/Announcement'
 import SideBar from 'components/SideBar'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
