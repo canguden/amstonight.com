@@ -2,7 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { AiFillHome, AiFillInstagram } from 'react-icons/ai'
+import {
+  AiFillHome,
+  AiFillInstagram,
+  AiOutlineCalendar,
+  AiTwotoneCrown,
+} from 'react-icons/ai'
 import { FaCrown, FaFacebook } from 'react-icons/fa'
 import { MdFestival } from 'react-icons/md'
 
@@ -51,15 +56,15 @@ const SideBar = () => {
             Explore
           </Link> */}
           <Link
-            href="/festivals"
+            href="/calendar"
             className={`${
-              router.pathname === '/festivals'
+              router.pathname === '/calendar'
                 ? 'mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-lg font-extrabold text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
                 : 'text-md font-regular mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
             } `}
           >
-            <MdFestival className="mr-3 h-7 w-7 justify-end" />
-            Festivals
+            <AiOutlineCalendar className="mr-3 h-7 w-7 justify-end" />
+            Calendar
           </Link>
 
           <Link
@@ -70,7 +75,7 @@ const SideBar = () => {
                 : 'text-md font-regular mr-3 mt-5 flex flex-row content-center items-center rounded-full py-2 px-2 text-black hover:bg-gray-300 dark:text-white dark:hover:bg-zinc-900'
             } `}
           >
-            <FaCrown className="mr-3 h-7 w-7 justify-end text-orange-500" />
+            <AiTwotoneCrown className="mr-3 h-7 w-7 justify-end text-orange-500" />
             King&apos;s Day
           </Link>
 

@@ -1,72 +1,105 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { FaCrown } from 'react-icons/fa'
-import { HiCalendar } from 'react-icons/hi2'
-import { SiGooglemaps } from 'react-icons/si'
+import { useState } from 'react'
+import { AiOutlineCalendar } from 'react-icons/ai'
 
-const MyLoader = () => {
-  return ''
+type Event = {
+  name: string
+  club: string
+  time: string
+  music: string
+  url: string
 }
 
-const kingsday = () => {
+function Ade() {
+  const [date, setDate] = useState(new Date('2023-04-01'))
+
+  const events: Record<string, Event[]> = {
+    '2023-04-26': [
+      {
+        name: 'Overbruggen',
+        club: 'Levenslang',
+        time: 'TBA',
+        music: 'TBA',
+        url: 'https://example.com/event1',
+      },
+    ],
+    '2023-04-27': [
+      {
+        name: 'Kingsday Festival',
+        club: 'RAI',
+        time: 'TBA',
+        music: 'TBA',
+        url: 'https://example.com/event3',
+      },
+    ],
+  }
+
+  const MyLoader = () => {
+    return ''
+  }
+
+  const daysToRender = [26, 27]
+
   return (
-    <>
-      <div>
-        <Head>
-          <title>Kingsday - Koningsdag - Events and Festivals </title>
-          <meta name="description" content="Check out the events on Kingsday" />
-        </Head>
-      </div>
-      <div className="align-center  mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
-        <FaCrown className="mr-3  ml-2 h-10 w-10 justify-end text-orange-500" />
-        King&apos;s Day - 27th of April
-      </div>
-      <p className="align-center ml-5 mt-5 mb-10 mr-1 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
-        Celebrate Kingsday in the Netherlands: Festivals and Events for All
-        Ages! Experience the vibrant culture of the Netherlands this Kingsday
-        with a variety of festivals and events for all ages. From traditional
-        Dutch music and dance to carnival rides and food stalls, there&apos;s
-        something for everyone to enjoy. Celebrate the Dutch monarchy with a day
-        of fun, festivities, and memories that will last a lifetime!
-      </p>
-
-      <div className="mx-auto mb-28 justify-center">
-        <Link href="/event/kingsland-27-04">
-          <Image
-            className="h-76 w-full object-cover md:h-auto  md:rounded-xl"
-            src="./kingsland.jpg"
-            unoptimized={true}
-            loader={MyLoader}
-            width={1024}
-            height={800}
-            alt="kingsland"
-          />
-        </Link>
-        <div className="flexflex-col mx-2 justify-between p-2 leading-normal md:mx-0">
-          <h5 className="mb-2 flex flex-row text-2xl font-bold tracking-tight text-orange-500 md:text-3xl">
-            Kingsland Festival 2023
-          </h5>
-
-          <div className="mt-5 flex flex-row hover:text-blue-500">
-            <Link href="https://goo.gl/maps/xomLaBipndc8doGk6" target="_blank">
-              <div className="flex flex-row">
-                <SiGooglemaps className="mt-1 mr-2 h-5 w-5 content-center text-orange-500" />
-                RAI Amsterdam
-              </div>
-            </Link>
-          </div>
-
-          <div className="mt-5 flex flex-row">
-            <HiCalendar className="align-center mt-0.5 mr-1 h-6 w-6 content-center items-center text-orange-500" />{' '}
-            27 April
-            <div className="ml-2 mb-24 flex flex-col">12:00 - 23:00</div>
-          </div>
+    <div className="mx-4 mb-20">
+      <div className=" flex items-center">
+        <Image
+          className="mr-3  flex h-10 w-10 flex-row items-center justify-end  rounded-md"
+          src="./willy.jpg"
+          loader={MyLoader}
+          unoptimized={true}
+          width={50}
+          height={50}
+          alt="kingsday"
+        />
+        <div className="text-xl font-bold">
+          {date.toLocaleString('default', { month: 'long' })}{' '}
+          {date.getFullYear()}
         </div>
       </div>
-    </>
+      {daysToRender.map((day) => {
+        const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1)
+          .toString()
+          .padStart(2, '0')}-${day.toString().padStart(2, '0')}`
+        const eventsForDay = events[formattedDate]
+
+        return (
+          <div key={day} className="my-4">
+            <div className="flex flex-row">
+              <div className="text-xl font-bold">{day}</div>
+              <div className="ml-2 text-xl"></div>
+              {date.toLocaleString('default', { month: 'long' })}
+            </div>
+            {eventsForDay ? (
+              <div className="mt-2">
+                {eventsForDay.map((event) => (
+                  <div
+                    key={event.name}
+                    className="dark:bg-white-400 mt-2 mb-2 rounded-lg  border-2 p-2 text-black dark:border-zinc-900 dark:text-white"
+                  >
+                    <div className=" text-lg font-bold">{event.name}</div>
+                    <div className="borderb border-2 border-orange-500"></div>
+                    <div className="mt-2 text-sm">{event.club}</div>
+                    <div className="text-sm">{event.time}</div>
+                    <div className="text-sm">{event.music}</div>
+                    <a
+                      href={event.url}
+                      rel="noreferrer"
+                      className="text-sm text-blue-600 hover:text-blue-700"
+                    >
+                      More details
+                    </a>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-2 rounded bg-blue-200 p-2">No events</div>
+            )}
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
-export default kingsday
+export default Ade

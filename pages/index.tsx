@@ -3,8 +3,6 @@ import { format, getMonth } from 'date-fns'
 import { PageType } from 'models/PageType'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { groq } from 'next-sanity'
 import { useCallback, useEffect, useState } from 'react'
 import { AiOutlineCalendar } from 'react-icons/ai'
@@ -17,6 +15,7 @@ import { MONTHS } from '../lib/constants'
 import { EventInfo } from '../models/EventInfo'
 import { TagType } from '../models/TagType'
 import { client } from '../sanity/lib/client'
+import Featured from 'components/Featured'
 
 type PropsType = {
   title: string
@@ -74,22 +73,8 @@ export default function IndexPage({ title, tags }: PropsType) {
             content="Check out all upcoming events in Amsterdam - The best dj and party guide - Awakenings - Open Air - Bars - Clubs"
           />
         </Head>
-
         <Announcement />
       </div>
-      {/* <div className="mb-10 mt-10">
-        <Link href="https://thuisbezorgd.nl" target="_blank">
-          <Image
-            className="h-76 w-full object-cover md:h-auto  md:rounded-xl"
-            src="./takeway.png"
-            loader={MyLoader}
-            unoptimized={true}
-            width={1024}
-            height={800}
-            alt="banner"
-          />
-          </Link>
-        </div> */}
       <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
         The Best Clubs, Bars, Events and Parties in Amsterdam!
       </div>
@@ -101,8 +86,7 @@ export default function IndexPage({ title, tags }: PropsType) {
         unforgettable!
       </p>
 
-      <div className="">
-        {/* <CurrentYear /> */}
+      <div>
         <Months
           selectedMonth={selectedMonth}
           setSelectedMonth={setSelectedMonth}
@@ -112,56 +96,26 @@ export default function IndexPage({ title, tags }: PropsType) {
           selectedDay={selectedDay}
           setSelectedDay={setSelectedDay}
         />
-        {/* <div className="my-10 mx-4 mt-10 mb-10 flex items-center justify-center mx-auto max-4xl md:mx-6">
-        <Tags
-          tags={tags}
-          setSelectedTag={setSelectedTag}
-          selectedTags={selectedTags}
-        />
-      </div> */}
+
+        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
+          Upcoming Events
+        </div>
 
         <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
           <AiOutlineCalendar className="mr-3 text-red-500" />
           {selectedDay}
         </div>
 
-        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
-          Upcoming Events
-        </div>
-
         <div className="mb-10">
-          <div className="mx-auto mt-5 mr-6 justify-end text-right ">
-            <button
-              className=" focus:dark:zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800"
-              onClick={() => setShow(true)}
-            >
-              <BsGrid3X3 className="h-5 w-5" />
-            </button>
-            <button
-              className=" focus:dark-zinc-900  my-1  mx-1 rounded-lg py-2 px-2 focus:bg-gray-300 active:bg-gray-300 focus:dark:bg-zinc-800 active:dark:bg-zinc-800"
-              onClick={() => setShow(false)}
-            >
-              <FaArrowsAltH className="h-5 w-5" />
-            </button>
-          </div>
-          {show ? (
-            <ListView
-              // setSelectedTag={setSelectedTag}
-              // selectedTags={selectedTags}
-              selectedDay={selectedDay}
-              events={eventsState}
-            />
-          ) : true ? (
-            <EventScrollMenu
-              // setSelectedTag={setSelectedTag}
-              // selectedTags={selectedTags}
-              selectedDay={selectedDay}
-              events={eventsState}
-            />
-          ) : (
-            false
-          )}
+          <div className="mx-auto mt-5 mr-6 justify-end text-right "></div>
+          <ListView
+            // setSelectedTag={setSelectedTag}
+            // selectedTags={selectedTags}
+            selectedDay={selectedDay}
+            events={eventsState}
+          />
         </div>
+        <Featured />
       </div>
     </>
   )

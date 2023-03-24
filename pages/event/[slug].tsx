@@ -100,7 +100,7 @@ export default function Slug() {
 
           <div className="mt-5 flex flex-row">{eventState?.Description}</div>
 
-          <div className="mt-10 mb-10 flex flex-row">
+          <div className="mb-32 mt-10 flex flex-row">
             <div className="flex flex-grow items-center  justify-start text-xl">
               <FaEuroSign className="mr-2 h-5 w-5 content-center" />{' '}
               {eventState?.eventPrice}

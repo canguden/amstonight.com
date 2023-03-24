@@ -1,7 +1,7 @@
-import cn from 'classnames';
-import { format, isToday } from 'date-fns';
-import { useContext } from 'react';
-import { VisibilityContext } from 'react-horizontal-scrolling-menu';
+import cn from 'classnames'
+import { format, isToday } from 'date-fns'
+import { useContext } from 'react'
+import { VisibilityContext } from 'react-horizontal-scrolling-menu'
 
 type PropsType = {
   onClick: (id: React.ContextType<typeof VisibilityContext>) => void
@@ -25,13 +25,11 @@ export const Day: React.FC<PropsType> = ({
   const renderFormatedDate = () => {
     return (
       <>
-        <div className="flex text-sm justify-center">{dayOfWeek}</div>
-        <div className="flex text-sm justify-center">{dayMonth}</div>
+        <div className="flex justify-center text-sm">{dayOfWeek}</div>
+        <div className="flex justify-center text-sm">{dayMonth}</div>
       </>
     )
   }
-
-
 
   const renderTonight = () => {
     return (
@@ -43,17 +41,16 @@ export const Day: React.FC<PropsType> = ({
     <>
       <div
         className={cn(
-          'select-none  border-2 border-gray-300 dark:border-gray-800 border-lg mx-2 w-[100px] cursor-pointer items-center justify-center 0 rounded py-2 px-2 font-bold hover:bg-red-500 hover:text-white dark:hover:bg-red-500 ',
+          'border-lg  0 mx-2 w-[100px] cursor-pointer select-none items-center justify-center rounded border-2 border-gray-300 py-2 px-2 font-bold hover:bg-red-500 hover:text-white dark:border-gray-800 dark:hover:bg-red-500 ',
           {
-            
-            'text-white dark:text-white bg-red-600 dark:bg-red-500 border-none hover:bg-red-500  dark:hover:bg-red-500': selected,
+            'border-none bg-red-600 text-white hover:bg-red-500 dark:bg-red-500 dark:text-white  dark:hover:bg-red-500':
+              selected,
           }
         )}
         onClick={() => onClick(visibility)}
       >
         {isTonight ? renderTonight() : renderFormatedDate()}
       </div>
-
     </>
   )
 }

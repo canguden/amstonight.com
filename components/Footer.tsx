@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { AiFillHome, AiTwotoneCrown } from 'react-icons/ai'
+import { AiFillHome, AiOutlineCalendar, AiTwotoneCrown } from 'react-icons/ai'
 import {
   FaCalendarAlt,
   FaCompass,
@@ -9,7 +9,7 @@ import {
   FaHome,
   FaMicroblog,
 } from 'react-icons/fa'
-import { MdFestival } from 'react-icons/md'
+import { MdFestival, MdOutlineExplore } from 'react-icons/md'
 
 const MyLoader = () => {
   return ''
@@ -25,24 +25,32 @@ const Footer = () => {
       <div className="mx-auto flex max-w-4xl flex-row  items-center justify-between px-4 text-center  dark:text-white ">
         <Link
           href="/"
+          className={`${router.pathname === '/' ? 'text-red-500' : ''} `}
+        >
+          <AiFillHome className=" h-6 w-6" />
+        </Link>
+
+        <Link
+          href="./calendar"
           className={`${
-            router.pathname === '/' ? 'ml-3 text-red-500' : 'ml-3'
+            router.pathname === '/calendar' ? ' text-red-500' : ' '
           } `}
         >
-          <AiFillHome className=" h-8 w-8" />
+          <AiOutlineCalendar className="h-6 w-6" />
         </Link>
 
         {/* <Link href="./explore">
     <FaCompass className='h-6 w-6'/>
   </Link> */}
-        <Link
+
+        {/* <Link
           href="./festivals"
           className={`${
             router.pathname === '/festivals' ? ' text-red-500' : ' '
           } `}
         >
-          <MdFestival className="h-8 w-8" />
-        </Link>
+          <MdFestival className="h-6 w-6" />
+        </Link> */}
 
         {/* <Link
           href="./news"
@@ -56,10 +64,10 @@ const Footer = () => {
         <Link
           href="./kingsday"
           className={`${
-            router.pathname === '/kingsday' ? ' text-orange-500' : 'ml-3'
+            router.pathname === '/kingsday' ? ' text-orange-500' : ''
           } `}
         >
-          <AiTwotoneCrown className="h-8 w-8" />
+          <AiTwotoneCrown className="h-6 w-6" />
         </Link>
 
         <Link href="./ade">
@@ -68,8 +76,8 @@ const Footer = () => {
             src="./logo-ade.png"
             loader={MyLoader}
             unoptimized={true}
-            width={35}
-            height={35}
+            width={30}
+            height={30}
             alt="ade"
           />
         </Link>

@@ -4,6 +4,7 @@ import { Slug } from '@sanity/types'
 import { TagType } from './TagType'
 
 export type EventInfo = {
+  endDate: string
   _id: string
   eventImage: { asset: SanityImageSource }
   eventDate: Date
