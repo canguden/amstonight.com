@@ -22,6 +22,13 @@ function MyCalendar() {
         url: '/event/girls-girls-girls-25-03',
       },
       {
+        name: 'Geroezemoes',
+        club: 'Chin Chin Club',
+        time: '22:00 - 05:00',
+        music: 'R&B, Disco, House Classics',
+        url: '/event/geroezemoes-25-03',
+      },
+      {
         name: 'Hitjesgolf',
         club: 'Disco Dolly',
         time: '23:00 - 05:00',

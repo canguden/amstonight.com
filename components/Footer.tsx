@@ -2,13 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { AiFillHome, AiOutlineCalendar, AiTwotoneCrown } from 'react-icons/ai'
-import {
-  FaCalendarAlt,
-  FaCompass,
-  FaCrown,
-  FaHome,
-  FaMicroblog,
-} from 'react-icons/fa'
 import { MdFestival, MdOutlineExplore } from 'react-icons/md'
 
 const MyLoader = () => {
@@ -19,7 +12,7 @@ const Footer = () => {
   const router = useRouter()
   return (
     <div
-      className="bottom-0 z-50 mt-10 border-t border-gray-300 bg-white py-6 dark:border-gray-800
+      className="bottom-0 z-50 mt-10 border-t border-gray-300 bg-white py-6 dark:border-zinc-900
       dark:bg-black 2xl:hidden "
     >
       <div className="mx-auto flex max-w-4xl flex-row  items-center justify-between px-4 text-center  dark:text-white ">
@@ -31,7 +24,7 @@ const Footer = () => {
         </Link>
 
         <Link
-          href="./calendar"
+          href="/calendar"
           className={`${
             router.pathname === '/calendar' ? ' text-red-500' : ' '
           } `}
@@ -62,7 +55,7 @@ const Footer = () => {
         </Link> */}
 
         <Link
-          href="./kingsday"
+          href="/kingsday"
           className={`${
             router.pathname === '/kingsday' ? ' text-orange-500' : ''
           } `}
@@ -70,7 +63,7 @@ const Footer = () => {
           <AiTwotoneCrown className="h-6 w-6" />
         </Link>
 
-        <Link href="./ade">
+        <Link href="/ade">
           <Image
             className=""
             src="./logo-ade.png"

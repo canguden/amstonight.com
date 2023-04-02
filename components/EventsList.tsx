@@ -50,10 +50,13 @@ export const EventsList: React.FC<PropsType> = ({
   const imageProps = useNextSanityImage(client, eventImage.asset) // https://www.sanity.io/plugins/next-sanity-image
   const date = new Date(selectedDay)
   const dayMonth = format(date, 'd MMM').toUpperCase()
-  const price = new Intl.NumberFormat('sfb', {
-    style: 'currency',
-    currency: 'EUR',
-  }).format(eventPrice)
+  const price =
+    new Intl.NumberFormat('sfb', {
+      style: 'currency',
+      currency: 'EUR',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(eventPrice) + '0'
 
   return (
     <div className="relative mx-2 max-w-4xl">

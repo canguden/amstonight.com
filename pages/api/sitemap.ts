@@ -11,6 +11,7 @@ export default async (
 ) => {
   const links = [
     { url: '/', changefreq: 'daily', priority: 0.3 },
+    { url: '/calendar', changefreq: 'daily', priority: 0.3 },
     { url: '/festivals', changefreq: 'daily', priority: 0.3 },
     { url: '/kingsday', changefreq: 'daily', priority: 0.3 },
     { url: '/ade', changefreq: 'daily', priority: 0.3 },

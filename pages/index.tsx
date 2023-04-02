@@ -1,3 +1,4 @@
+import Featured from 'components/Featured'
 import { ListView } from 'components/ListView'
 import { format, getMonth } from 'date-fns'
 import { PageType } from 'models/PageType'
@@ -15,7 +16,6 @@ import { MONTHS } from '../lib/constants'
 import { EventInfo } from '../models/EventInfo'
 import { TagType } from '../models/TagType'
 import { client } from '../sanity/lib/client'
-import Featured from 'components/Featured'
 
 type PropsType = {
   title: string
@@ -73,18 +73,11 @@ export default function IndexPage({ title, tags }: PropsType) {
             content="Check out all upcoming events in Amsterdam - The best dj and party guide - Awakenings - Open Air - Bars - Clubs"
           />
         </Head>
-        <Announcement />
       </div>
-      <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
-        The Best Clubs, Bars, Events and Parties in Amsterdam!
-      </div>
-      <p className="align-center ml-5 mt-5 mr-2 flex flex-row content-center  items-center text-lg  font-thin md:text-lg">
+      <div className="align-center ml-5 mt-5 flex flex-row content-center  items-center text-xl  font-bold md:text-xl">
         Explore Amsterdam&apos;s Exciting Nightlife with the Ultimate Party
-        Calendar! Discover the best parties and events in Amsterdam with our
-        comprehensive party calendar. From rooftop bars to festivals and clubs,
-        we have all the information you need to make your night out in Amsterdam
-        unforgettable!
-      </p>
+        Calendar!
+      </div>
 
       <div>
         <Months
@@ -115,6 +108,7 @@ export default function IndexPage({ title, tags }: PropsType) {
             events={eventsState}
           />
         </div>
+        <div className="border-2 border-b border-red-500"></div>
         <Featured />
       </div>
     </>

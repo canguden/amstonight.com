@@ -25,16 +25,15 @@ const SideBar = () => {
 
   return (
     <div className="z-50 hidden xl:fixed xl:top-0  xl:h-full xl:min-h-screen xl:border-r xl:border-gray-300 xl:dark:border-zinc-900 2xl:flex ">
-      <div className="w-96 bg-white dark:bg-black ">
+      <div className="w-[370px] bg-white dark:bg-black ">
         <Link href="/">
-          <h1 className="fex-row ml-8 mt-10 flex px-2 font-bold   md:font-bold">
-            <span className="text-2xl font-extrabold">
+          <h1 className="fex-row mt-10 flex  font-bold   md:font-bold"></h1>
+        </Link>
+        <div className=" ml-6 flex flex-col ">
+          <div className="">
+            <span className="ml-5 mr-2 text-2xl font-extrabold">
               Amsterdam Party Agenda
             </span>
-          </h1>
-        </Link>
-        <div className="ml-8 flex flex-col ">
-          <div className="">
             <Link
               href="/"
               className={`${

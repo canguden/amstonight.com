@@ -18,9 +18,9 @@ function Ade() {
       {
         name: 'Overbruggen',
         club: 'Levenslang',
-        time: 'TBA',
-        music: 'TBA',
-        url: 'https://example.com/event1',
+        time: '22:00 - 05:00',
+        music: 'Mix',
+        url: '/event/overbruggen-26-04',
       },
     ],
     '2023-04-27': [
