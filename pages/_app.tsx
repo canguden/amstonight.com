@@ -14,16 +14,13 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider enableSystem={true} attribute="class">
-        <SideBar />
         <Header />
         {/* <Ad /> */}
         <div className="m-auto  mt-10 sm:max-w-3xl">
           <Component {...pageProps} />
         </div>
         <Analytics />
-        <div className="fixed bottom-0 mt-20 w-full flex-grow">
-          <Footer />
-        </div>
+        <div className="fixed bottom-0 mt-20 w-full flex-grow"></div>
       </ThemeProvider>
     </>
   )

@@ -108,8 +108,6 @@ export default function IndexPage({ title, tags }: PropsType) {
             events={eventsState}
           />
         </div>
-        <div className="border-2 border-b border-red-500"></div>
-        <Featured />
       </div>
     </>
   )
