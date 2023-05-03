@@ -54,7 +54,7 @@ const Featured = () => {
         <div className="ml-2 text-xl">2023</div>
       </div>
 
-      <div className="mx-2 mt-5 mt-5 justify-center">
+      <div className="mx-2 mt-5 justify-center">
         <Link href="/event/awakenings-amsterdam-07-04">
           <Image
             className="h-76 w-full rounded-xl object-cover  md:h-auto"

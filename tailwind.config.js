@@ -8,16 +8,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './intro-template/**/*.{js,ts,jsx,tsx}',
   ],
-  
-  darkMode: "class", 
+
+  darkMode: 'class',
   theme: {
     extend: {},
   },
 
   variants: {
     extend: {},
-    backgroundColor: ['active']
+    backgroundColor: ['active'],
   },
-  
+
   plugins: [require('@tailwindcss/typography')],
 }

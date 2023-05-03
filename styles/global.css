@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
 
-    @apply bg-white text-gray-900 dark:bg-black dark:text-gray-300;
+    @apply bg-white text-gray-900 duration-300 dark:bg-black dark:text-gray-300;
   }
 }
 

@@ -74,10 +74,6 @@ export default function IndexPage({ title, tags }: PropsType) {
           />
         </Head>
       </div>
-      <div className="align-center ml-5 mt-5 flex flex-row content-center  items-center text-xl  font-bold md:text-xl">
-        Explore Amsterdam&apos;s Exciting Nightlife with the Ultimate Party
-        Calendar!
-      </div>
 
       <div>
         <Months
