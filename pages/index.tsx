@@ -86,11 +86,11 @@ export default function IndexPage({ title, tags }: PropsType) {
           setSelectedDay={setSelectedDay}
         />
 
-        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-2xl  font-bold md:text-3xl">
+        <div className="align-center ml-5 mt-10 flex flex-row content-center  items-center text-lg  font-bold md:text-lg">
           Upcoming Events
         </div>
 
-        <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-xl md:text-2xl">
+        <div className="align-center ml-5 mt-10 flex flex-row  content-center items-center  text-lg ">
           <AiOutlineCalendar className="mr-3 text-red-500" />
           {selectedDay}
         </div>
